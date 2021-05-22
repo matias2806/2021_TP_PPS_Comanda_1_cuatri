@@ -10,7 +10,7 @@ Mínimo 2 integrantes -->
 
 
 
-###### TP PPS
+# TP PPS
 
 ### Programadores :iphone:
 
@@ -18,7 +18,6 @@ Mínimo 2 integrantes -->
 - María Belén Mayo
 - Matias Palmieri
 - Maximiliano Vargas
-
 ```
 
 
@@ -28,15 +27,14 @@ Para organización interna del grupo decidimos armar un [Trello](https://trello.
 Nuestro proyecto esta conectado a [Firebase](https://console.firebase.google.com/project/restaurantapp-3405c/overview), donde usaremos a la
 misma como nuestro gestor de datos.
 
-#### Paso a Paso
+# Paso a Paso
 
 ### Spring 0 - 22/05/2021 al 22/05/2021
 
 ```
-- Armado de distintos canales de comunicación interna del grupo.
+- Armado de distintos canales de comunicación interna del grupo (Discord, Grupo de WhatsaApp)
 - Armado y carga de tareas en el Trello.
 - Armado del marco de trabajo.
-
 ```
 
 ### Spring 1 - 22/05/2021 al 29/05/2021
