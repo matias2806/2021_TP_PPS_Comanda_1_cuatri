@@ -1,12 +1,17 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <h3>Prueba</h3>
-  <button class="btn btn-primary">Prueba de estilos</button>
-</ion-content>
+<div class="container-home">
+  <div class="nav-home">
+    <ion-icon (click)="this.back()" name="exit-outline"></ion-icon>
+    <span class="nombre-user">{{tipoUser}}</span>
+    <div class="container-avatar">
+      <img [src]="fotis" alt="">
+    </div>
+  </div>
+  <div class="main">
+    <!-- <app-duenio *ngIf="tipoUser == 'dueño' || tipoUser == 'supervisor'"></app-duenio>
+    <app-home-mozo *ngIf="tipoUser == 'mozo' "></app-home-mozo>
+    <app-cliente *ngIf="tipoUser == 'cliente' "></app-cliente>
+    <app-home-metre *ngIf="tipoUser == 'metre' "></app-home-metre>
+    <app-bartender *ngIf="tipoUser == 'bartender' "></app-bartender>
+    <app-cocinero *ngIf="tipoUser == 'cocinero' "></app-cocinero> -->
+  </div>
+</div>
