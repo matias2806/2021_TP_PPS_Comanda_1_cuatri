@@ -1,0 +1,81 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    width: 100%;
+    background: rgb(0, 14, 143);
+}
+
+.container-splash {
+    --background: none;
+    background: rgb(36, 136, 202);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.splash {
+    width: 400px;
+    height: 350px;
+    position: absolute;
+}
+
+.cargando {
+  font-size: 1.3em;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-40%, 30%);
+  height: 4%;
+  color: black;
+  font-weight: 900;
+  font-family: "cicero";
+}
+
+.cargando:after {
+    content: "...";
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    animation: puntos-suspensivos 1s infinite .3s;
+    animation-fill-mode: fowards;
+    width: 2em;
+    
+    
+}
+
+@keyframes puntos-suspensivos {
+    25% {
+      content: "";
+    }
+    50% {
+      content: ".";
+    }
+    75% {
+      content: "..";
+    }
+    100% {
+      content: "...";
+    }
+}
+
+.devs {
+  font-size: .8em;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-40%, 30%);
+  height: 4%;
+  color: black;
+  font-weight: 900;
+  font-family: "cicero";
+  text-align: center;
+}
