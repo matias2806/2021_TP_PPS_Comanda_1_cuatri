@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "restaurantapp-3405c": {
+      "hosting": {
+        "app": [
+          "restaurantapp-3405c"
+        ]
+      }
+    }
+  }
+}
