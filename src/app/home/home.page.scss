@@ -1,27 +1,41 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.container-home {
+  height: 100vh;
+  width: 100vw;
+  background: url(../../assets/img/title-login.jpg) center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.nav-home {
+  height: 10%;
+  background: #2488ca;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  & ion-icon {
+    font-size: 4em;
+  }
+  & span {
+    width: 80%;
+    text-align: right;
+    font-size: 1.5em;
+    padding-right: 10px;
+  }
+  & .container-avatar {
+    width: 20%;
+    height: 100%;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+.main{
+  margin-top: 21%;
+  width: 100%;
+  height: 90%;
 }
