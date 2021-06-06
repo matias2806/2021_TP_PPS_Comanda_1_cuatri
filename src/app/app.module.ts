@@ -14,8 +14,15 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { RegistroPage } from './pages/registro/registro.page';
+import { FormsModule } from '@angular/forms';
+
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { Vibration } from '@ionic-native/vibration/ngx';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, RegistroPage],
   entryComponents: [],
   imports: [
     BrowserModule, 
@@ -24,12 +31,16 @@ import { AppRoutingModule } from './app-routing.module';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, 
     SplashScreen,
-    StatusBar
+    StatusBar, 
+    Camera,
+    Vibration,
+    BarcodeScanner
   ],
   bootstrap: [AppComponent],
 })

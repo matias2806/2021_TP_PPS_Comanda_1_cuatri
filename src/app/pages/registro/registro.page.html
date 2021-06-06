@@ -4,14 +4,13 @@
   <div class="titulo">
     <center><h2>ReComiendo</h2></center>
   </div>
-  <div class="botones-registro">
-    <!-- <div class="botones-registro" *ngIf="!registro"> -->
+  <div class="botones-registro" *ngIf="!registro">
     <button type="button" (click)="registro=true">Ingreso Manual</button>
     <button type="button" (click)="scanDNI()">Escanear DNI</button>
   </div>
   <div class="form" *ngIf="registro">
     <form (ngSubmit)="registrar()">
-      <img src="../../../assets/img/userDefault.jpg" alt="" (click)="this.selectPhotoInPhotolibrary()">
+      <img src="../../../assets/img/userDefault.png" alt="" (click)="this.selectPhotoInPhotolibrary()">
       <div class="form-input">
         <div class="cnt-form-input-select" [hidden]="this.perfil == 'cliente'">
           <select name="" id="form-input-select" class="form-input-select" (change)="setSelectedProfile()">
@@ -34,7 +33,7 @@
 </div>
 <div id="modal-error" class="modal-error"> 
   <div class="modal-error-img">
-    <img src="../../../assets/img/banana-podrida.gif" alt="">
+    <!-- <img src="../../../assets/img/banana-podrida.gif" alt=""> -->
   </div>
   <div class="modal-error-text">
     <p id="modal-error-text-p"></p>
