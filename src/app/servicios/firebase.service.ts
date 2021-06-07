@@ -19,28 +19,28 @@ export class FirebaseService {
     private http: HttpClient
   ) {}
 
-  // logout() {
-  //   return this.afAuth.auth.signOut();
-  // }
+  logout() {
+    return this.afAuth.signOut();
+  }
 
-  // loginEmail(email: string, pass: string) {
-  //   return new Promise((resolve, reject) => {
-  //     this.afAuth.auth
-  //       .signInWithEmailAndPassword(email, pass)
-  //       .then(
-  //         (userData) => {
-  //           console.log(userData);
-  //           resolve(userData);
-  //         },
-  //         (err) => reject(err)
-  //       )
-  //       .catch((e) => reject(e));
-  //   });
-  // }
+  loginEmail(email: string, pass: string) {
+    return new Promise((resolve, reject) => {
+      this.afAuth
+        .signInWithEmailAndPassword(email, pass)
+        .then(
+          (userData) => {
+            console.log(userData);
+            resolve(userData);
+          },
+          (err) => reject(err)
+        )
+        .catch((e) => reject(e));
+    });
+  }
 
-  // getCurrentUser(): any {
-  //   return this.afAuth.auth.currentUser;
-  // }
+  getCurrentUser(): any {
+    return this.afAuth.currentUser;
+  }
 
   getDB(collection: string) {
     return new Promise((resolve, reject) => {
@@ -118,24 +118,24 @@ export class FirebaseService {
     });
   }
 
-  // registerEmail(email: string, password: string) {
-  //   return new Promise((resolve, reject) => {
-  //     this.afAuth.auth.createUserWithEmailAndPassword(email, password).then(
-  //       (data) => {
-  //         resolve(data);
-  //       },
-  //       (error) => reject(error)
-  //     );
-  //   });
-  // }
+  registerEmail(email: string, password: string) {
+    return new Promise((resolve, reject) => {
+      this.afAuth.createUserWithEmailAndPassword(email, password).then(
+        (data) => {
+          resolve(data);
+        },
+        (error) => reject(error)
+      );
+    });
+  }
 
-  // registerAsAnonymously() {
-  //   return new Promise((resolve, reject) => {
-  //     this.afAuth.auth.signInAnonymously().then((user: any) => {
-  //       resolve(user.user.uid);
-  //     });
-  //   });
-  // }
+  registerAsAnonymously() {
+    return new Promise((resolve, reject) => {
+      this.afAuth.signInAnonymously().then((user: any) => {
+        resolve(user.user.uid);
+      });
+    });
+  }
 
   getUserProfile(email: string) {
     return new Promise((resolve, reject) => {

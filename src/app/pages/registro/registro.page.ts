@@ -48,39 +48,39 @@ export class RegistroPage implements OnInit {
     document.getElementById(id).style.borderBottom = "1px solid ghostwhite";
   }
 
-  // registrar()
-  // {
-  //   if(this.validarTipoEmpleado() && this.validarNombreApellido() && this.validarDni() && this.validarCorreo() &&  this.validarClave() && this.validarCuil() )
-  //   {
-  //     this.servicio.registerEmail(this.correo, this.clave).then((a) => {
+  registrar()
+  {
+    if(this.validarTipoEmpleado() && this.validarNombreApellido() && this.validarDni() && this.validarCorreo() &&  this.validarClave() && this.validarCuil() )
+    {
+      this.servicio.registerEmail(this.correo, this.clave).then((a) => {
 
-  //       if(this.file != null){
-  //         this.servicio.uploadPhoto(this.file, `${this.perfilSeleccionado.toLowerCase()}/${this.correo}`).then((datos) => {
-  //           this.url = <string>datos;
-  //           this.servicio.createDocInDB(`${this.perfilSeleccionado.toLowerCase()}`, this.correo, this.toJSON());
-  //           this.servicio.sendNotification(this.correo, 'dueño')
-  //         });
-  //       }
-  //       else{
-  //         this.url = 'default';
-  //         this.servicio.createDocInDB(`${this.perfilSeleccionado.toLowerCase()}`, this.correo, this.toJSON());
-  //         this.servicio.sendNotification(this.correo, 'dueño')
-  //       }
+        if(this.file != null){
+          // this.servicio.uploadPhoto(this.file, `${this.perfilSeleccionado.toLowerCase()}/${this.correo}`).then((datos) => {
+          //   this.url = <string>datos;
+          //   this.servicio.createDocInDB(`${this.perfilSeleccionado.toLowerCase()}`, this.correo, this.toJSON());
+          //   this.servicio.sendNotification(this.correo, 'dueño')
+          // });
+        }
+        else{
+          this.url = 'default';
+          this.servicio.createDocInDB(`${this.perfilSeleccionado.toLowerCase()}`, this.correo, this.toJSON());
+          this.servicio.sendNotification(this.correo, 'dueño')
+        }
 
-  //       $("#form-button-register").addClass("animation");
-  //       setTimeout(()=> {
-  //         this.spinner.activateAndRedirect("backdrop",3000,"login");
-  //       },1000)
+        $("#form-button-register").addClass("animation");
+        setTimeout(()=> {
+          this.spinner.activateAndRedirect("backdrop",3000,"login");
+        },1000)
 
-  //     }).catch((error)=>{
-  //       this.s_utilidad.textoMostrar("#modal-error-text-p","Usuario ya existente", "#modal-error", ".container-registro")
-  //       this.vibrationService.error()
-  //     })
-  //   }
-  //   else{
-  //     this.vibrationService.error()
-  //   }
-  // }
+      }).catch((error)=>{
+        this.s_utilidad.textoMostrar("#modal-error-text-p","Usuario ya existente", "#modal-error", ".container-registro")
+        this.vibrationService.error()
+      })
+    }
+    else{
+      this.vibrationService.error()
+    }
+  }
 
   validarCorreo() : boolean
   {
@@ -268,8 +268,8 @@ export class RegistroPage implements OnInit {
     this.perfilSeleccionado = select.options[select.selectedIndex].text;
   }
 
-  // redirectBack()
-  // {
-  //   this.location.back();
-  // }
+  redirectBack()
+  {
+    this.location.back();
+  }
 }
