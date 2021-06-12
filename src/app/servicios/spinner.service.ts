@@ -14,7 +14,7 @@ export class SpinnerService {
   }
 
   deactivate(idBackdrop:string){
-    $(`#${idBackdrop}`).attr('hidden', true);
+    $(`#${idBackdrop}`).attr('hidden', "500");
   }
 
   async activateAndRedirect(idBackdrop:string, time:number,route:string){

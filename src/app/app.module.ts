@@ -22,8 +22,15 @@ import * as $ from "jquery";
 //import { ComidaNuevoPipe } from "./pipes/comida-nuevo.pipe";
 //import { BebidaNuevoPipe } from "./pipes/bebida-nuevo.pipe";
 
+import { RegistroPage } from './pages/registro/registro.page';
+import { FormsModule } from '@angular/forms';
+
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { Vibration } from '@ionic-native/vibration/ngx';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, RegistroPage],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -34,6 +41,7 @@ import * as $ from "jquery";
     AngularFireAuthModule,
     AngularFirestoreModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [
     StatusBar,
@@ -42,6 +50,7 @@ import * as $ from "jquery";
     Camera,
     BarcodeScanner,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    StatusBar
   ],
   bootstrap: [AppComponent],
 })
