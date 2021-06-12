@@ -1,0 +1,12 @@
+<div class="container-mozo" *ngIf="redirect=='home'">
+  <div class="btns-home-mozo">
+    <div (click)="redirect='pedidos'"><span>Confirmar pedidos</span></div>
+    <div (click)="redirect='pendientes'"><span>Pedidos Pendientes</span></div>
+    <div (click)="redirect='consultas'"><span>Consultas</span></div>
+    <div (click)="redirect='pagos'"><span>Lista de pagos</span></div>
+  </div>
+</div>
+<app-pagos (volver)="redirect=$event" *ngIf="redirect=='pagos'"></app-pagos>
+<app-pedidos (volver)="redirect=$event" *ngIf="redirect=='pedidos'"></app-pedidos>
+<app-consultas (volver)="redirect=$event" *ngIf="redirect=='consultas'"></app-consultas>
+<app-pedidos-pendientes (volver)="redirect=$event" *ngIf="redirect=='pendientes'"></app-pedidos-pendientes>
