@@ -1,3 +1,4 @@
+
 import { Component, OnInit} from '@angular/core';
 import { FirebaseService } from 'src/app/servicios/firebase.service';
 import { UtilidadService } from 'src/app/servicios/utilidad.service';
@@ -274,3 +275,4 @@ export class RegistroPage implements OnInit {
     this.location.back();
   }
 }
+

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 // import { FirebaseService } from '../services/firebase.service';
-import { SpinnerService } from '../services/spinner.service';
+import { SpinnerService } from '../servicios/spinner.service';
 
 @Component({
   selector: 'app-home',
