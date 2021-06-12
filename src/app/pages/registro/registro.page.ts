@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';import { FirebaseService } from 'src/app/servicios/firebase.service';
+
+import { Component, OnInit} from '@angular/core';
+import { FirebaseService } from 'src/app/servicios/firebase.service';
 import { UtilidadService } from 'src/app/servicios/utilidad.service';
 import * as $ from 'jquery';
 import { SpinnerService } from 'src/app/servicios/spinner.service';
 import { Platform } from '@ionic/angular';
 import { QRScannerService } from 'src/app/servicios/qrscanner.service';
-import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFirestore } from 'angularfire2/firestore';
 import { VibrationService } from 'src/app/servicios/vibration.service';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
@@ -273,3 +275,4 @@ export class RegistroPage implements OnInit {
     this.location.back();
   }
 }
+

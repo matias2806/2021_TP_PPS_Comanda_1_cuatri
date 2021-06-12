@@ -1,7 +1,10 @@
 import { Injectable } from "@angular/core";
-import { AngularFireAuth } from "@angular/fire/auth";
-import { AngularFirestore, AngularFirestoreDocument} from "@angular/fire/firestore";
-import { AngularFireStorageModule } from "@angular/fire/storage";
+import { AngularFireAuth } from "angularfire2/auth";
+import {
+  AngularFirestore,
+  AngularFirestoreDocument,
+} from "angularfire2/firestore";
+import { storage, functions } from "firebase";
 import { Camera, CameraOptions } from "@ionic-native/camera/ngx";
 import { Router } from "@angular/router";
 import { map } from "rxjs/internal/operators/map";
@@ -9,7 +12,7 @@ import { FunctionCall } from "@angular/compiler";
 import { HttpClient } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class FirebaseService {
   constructor(
@@ -20,12 +23,12 @@ export class FirebaseService {
   ) {}
 
   logout() {
-    return this.afAuth.signOut();
+    return this.afAuth.auth.signOut();
   }
 
   loginEmail(email: string, pass: string) {
     return new Promise((resolve, reject) => {
-      this.afAuth
+      this.afAuth.auth
         .signInWithEmailAndPassword(email, pass)
         .then(
           (userData) => {
@@ -39,7 +42,7 @@ export class FirebaseService {
   }
 
   getCurrentUser(): any {
-    return this.afAuth.currentUser;
+    return this.afAuth.auth.currentUser;
   }
 
   getDB(collection: string) {
@@ -78,23 +81,23 @@ export class FirebaseService {
     });
   }
 
-  // uploadPhoto(photo, route: string, metaData = null) {
-  //   let photoUrl;
-  //   const uploadString = storage().ref(route);
+  uploadPhoto(photo, route: string, metaData = null) {
+    let photoUrl;
+    const uploadString = storage().ref(route);
 
-  //   return new Promise((resolve, reject) => {
-  //     uploadString.putString(photo, "data_url").then(() => {
-  //       uploadString.getDownloadURL().then(
-  //         (url) => {
-  //           photoUrl = url;
-  //           if (metaData != null) uploadString.updateMetadata(metaData);
-  //           resolve(photoUrl);
-  //         },
-  //         (error) => reject(error)
-  //       );
-  //     });
-  //   });
-  // }
+    return new Promise((resolve, reject) => {
+      uploadString.putString(photo, "data_url").then(() => {
+        uploadString.getDownloadURL().then(
+          (url) => {
+            photoUrl = url;
+            if (metaData != null) uploadString.updateMetadata(metaData);
+            resolve(photoUrl);
+          },
+          (error) => reject(error)
+        );
+      });
+    });
+  }
 
   createDocInDB(collection: string, docName: string, data: any) {
     this.db.collection(collection).doc(docName).set(data);
@@ -120,7 +123,7 @@ export class FirebaseService {
 
   registerEmail(email: string, password: string) {
     return new Promise((resolve, reject) => {
-      this.afAuth.createUserWithEmailAndPassword(email, password).then(
+      this.afAuth.auth.createUserWithEmailAndPassword(email, password).then(
         (data) => {
           resolve(data);
         },
@@ -131,7 +134,7 @@ export class FirebaseService {
 
   registerAsAnonymously() {
     return new Promise((resolve, reject) => {
-      this.afAuth.signInAnonymously().then((user: any) => {
+      this.afAuth.auth.signInAnonymously().then((user: any) => {
         resolve(user.user.uid);
       });
     });

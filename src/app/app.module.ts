@@ -14,7 +14,7 @@ import { environment } from "../environments/environment";
 import { AngularFirestoreModule } from "angularfire2/firestore";
 
 import { Vibration } from "@ionic-native/vibration/ngx";
-import { Camera } from "@ionic-native/camera/ngx";
+import { Camera, CameraOptions } from "@ionic-native/camera/ngx";
 import { BarcodeScanner } from "@ionic-native/barcode-scanner/ngx";
 import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
@@ -24,10 +24,6 @@ import * as $ from "jquery";
 
 import { RegistroPage } from './pages/registro/registro.page';
 import { FormsModule } from '@angular/forms';
-
-import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
-import { Vibration } from '@ionic-native/vibration/ngx';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 @NgModule({
   declarations: [AppComponent, RegistroPage],
