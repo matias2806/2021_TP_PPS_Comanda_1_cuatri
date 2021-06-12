@@ -25,3 +25,4 @@ export class QRScannerService {
     return {nombre: nombre, apellido: apellido, dni: dni}
   }
 }
+
