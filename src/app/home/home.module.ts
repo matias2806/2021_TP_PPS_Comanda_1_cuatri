@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-
+import { HomeMozoComponent } from '../components/mozo/home-mozo/home-mozo.component';
 
 @NgModule({
   imports: [
@@ -14,6 +14,9 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [
+    HomePage,
+    HomeMozoComponent
+  ]
 })
 export class HomePageModule {}
