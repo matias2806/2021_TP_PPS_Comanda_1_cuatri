@@ -1,14 +1,3 @@
-<!-- # 2021_TP_PPS_Comanda_1_cuatri
-PPS - 1 cuat. - grupos para el segundo parcial.
-
-Para registrar el grupo completo con todos sus integrantes: https://forms.gle/bCF16B4Khrz1Ey1n8
-
-Grupos:
-
-Máximo 3 integrantes
-Mínimo 2 integrantes -->
-
-
 
 # TP PPS (ReComiendo)
 
@@ -29,7 +18,7 @@ misma como nuestro gestor de datos.
 
 # Paso a Paso
 
-### Spring 0 - 22/05/2021 al 22/05/2021
+### Spring 1 - 29/05/2021 al 05/06/2021
 
 ```
 - Armado de distintos canales de comunicación interna del grupo (Discord, Grupo de WhatsaApp)
@@ -37,10 +26,16 @@ misma como nuestro gestor de datos.
 - Armado del marco de trabajo.
 ```
 
-### Spring 1 - 22/05/2021 al 29/05/2021
+### Spring 2 - 05/06/2021 al 12/06/2021
 
-### Spring 2 - 29/05/2021 al 05/06/2021
+```
+- Armado de Login, armado de servicios esenciales firebase y utilidad(Maxi)
+- Armado de Registro, armado de servicios esenciales qr y sppiner (Belen)
+- Armado de Home y Navbar, armado de servicios esenciales vibracion y pedidos (Matias)
+```
 
-### Spring 3 - 05/06/2021 al 12/06/2021
+### Spring 3 - 12/06/2021 al 19/06/2021
 
-### Spring 4 - 12/06/2021 al 19/06/2021
+### Spring 4 - 19/06/2021 al 26/06/2021
+
+### Spring 5 - 26/06/2021 al 03/07/2021
