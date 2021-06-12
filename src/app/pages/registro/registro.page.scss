@@ -1,0 +1,226 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    color: ghostwhite;
+    font-family: 'cicero';
+}
+
+.container-registro
+{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url(../../../assets/img/title-login.jpg);
+    background-position: center;
+    background-size: cover;
+    flex-flow: column;
+    display: flex;
+    background-repeat: no-repeat;
+    transition: all ease 0.5s;
+}
+
+div.titulo{
+    padding-top: 10%;
+    height: 14%;
+}
+
+div.form{
+    height: 86%;
+    display: flex;
+    justify-content: center;
+}
+
+h1
+{
+    text-align: center;
+    font-family: "resto";
+    font-size: 3.5em;
+    letter-spacing: 1px;
+    padding: 10%;
+}
+
+form
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: column;
+    width: 70%;
+    height: 95%;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
+
+.form-input
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column;
+    height: 62%;
+    width: 100%;
+}
+
+ion-input
+{
+    width: 100%;
+    max-height: 10%;
+    text-align: center;
+    border-bottom: 1px solid ghostwhite;
+    font-size: 1.2em;
+    transition: 0.2s;
+    text-align: left;
+    --placeholder-opacity: 0.9;
+}
+
+::placeholder
+{
+    color: black;
+}
+
+.form-button
+{
+    width: 80%;
+    text-align: center;
+    position: relative;
+    top: 3%;
+}
+
+
+.form-button button
+{
+    position: relative;
+    height: 6vh;
+    width: 70%;
+    font-size: 1em;
+    border-radius: 30px;
+    background: #2488ca;
+    outline: none;
+    font-weight: bold;
+}
+
+.animation
+{
+    animation: change 0.4s linear forwards;
+}
+
+@keyframes change
+{
+    0%{transform: scaleX(1); background: rgb(122, 1, 1);font-size: 0;}
+    50%{transform: scaleX(0); font-size: 0;}
+    100%{transform: scaleX(1); background: rgb(51, 158, 30);font-size: 1em; font-weight: bold;}
+}
+
+form img
+{
+    width: 35%;
+}
+
+ion-icon
+{
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    font-size: 2em;
+}
+
+.modal-error
+{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70%;
+    height: 35%;
+    z-index: 5;
+}
+
+.modal-error-img
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: #0d0e0d;
+}
+
+.modal-error-img img
+{
+    width: 60%;
+}
+
+.modal-error-text
+{
+    height: 40%;
+    background: #7a0101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 5;
+}
+
+.modal-error-text p {
+    font-size: 1.5em;
+}
+
+.botones-registro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-35%);
+    display: flex; 
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 20%;
+}
+
+.botones-registro button {
+    background: #3a9fe2; 
+    width: 100%;
+    height: 35%;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+
+.botones-registro button:active{
+    background: #01097a //rgb(42, 21, 77);
+}
+
+.form-input-select
+{
+    width: 100%;
+    color: gainsboro;
+    border-radius: 20px;
+    background: none;
+    /* border: none; */
+    border: 2px solid ghostwhite;
+    text-indent: 4px;
+    font-size: 1.2em;
+    outline: none;
+}
+
+.form-input-select option
+{
+    color: black;
+}
+
+.cnt-form-input-select
+{
+    text-align: center;
+    width: 100%;
+}

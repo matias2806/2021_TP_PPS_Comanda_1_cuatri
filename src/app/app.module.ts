@@ -21,7 +21,8 @@ import { HttpClientModule } from "@angular/common/http";
 import * as $ from "jquery";
 //import { ComidaNuevoPipe } from "./pipes/comida-nuevo.pipe";
 //import { BebidaNuevoPipe } from "./pipes/bebida-nuevo.pipe";
-
+//import { RegistroPage } from './pages/registro/registro.page';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -34,6 +35,7 @@ import * as $ from "jquery";
     AngularFireAuthModule,
     AngularFirestoreModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [
     StatusBar,

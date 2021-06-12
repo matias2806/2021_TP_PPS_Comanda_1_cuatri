@@ -1,0 +1,41 @@
+<div class="container-registro">
+  <ion-icon (click)="this.redirectBack()" *ngIf="!registro" name="exit-outline"></ion-icon>
+  <ion-icon (click)="registro=false" *ngIf="registro" name="exit-outline"></ion-icon>
+  <div class="titulo">
+    <center><h2>ReComiendo</h2></center>
+  </div>
+  <div class="botones-registro" *ngIf="!registro">
+    <button type="button" (click)="registro=true">Ingreso Manual</button>
+    <button type="button" (click)="scanDNI()">Escanear DNI</button>
+  </div>
+  <div class="form" *ngIf="registro">
+    <form (ngSubmit)="registrar()">
+      <img src="../../../assets/img/userDefault.png" alt="" (click)="this.selectPhotoInPhotolibrary()">
+      <div class="form-input">
+        <div class="cnt-form-input-select" [hidden]="this.perfil == 'cliente'">
+          <select name="" id="form-input-select" class="form-input-select" (change)="setSelectedProfile()">
+            <option value="" selected hidden>Seleccione tipo usuario</option>
+            <option value="" *ngFor="let perfil of this.perfiles">{{perfil}}</option>
+          </select>
+        </div>
+        <ion-input type="text" id="nombreReg" autocapitalize="words" name="nombre" placeholder="Nombre" maxlength="30" clear-input (ionFocus)='focus("nombreReg")' (ionBlur)='noFocus("nombreReg")' [(ngModel)]="this.nombre"></ion-input>
+        <ion-input type="text" id="apellidoReg" autocapitalize="words" name="apellido" placeholder="Apellido" maxlength="30" clear-input (ionFocus)='focus("apellidoReg")' (ionBlur)='noFocus("apellidoReg")' [(ngModel)]="this.apellido"></ion-input>
+        <ion-input type="number" id="dniReg" name="dni" placeholder="Nª Documento" inputmode="numeric" maxlength="8" clear-input (ionFocus)='focus("dniReg")' (ionBlur)='noFocus("dniReg")' [(ngModel)]="this.dni"></ion-input>
+        <ion-input [hidden]="this.perfil == 'cliente'" type="text" id="cuilReg" name="cuil" placeholder="Nª Cuil" inputmode="numeric" maxlength="13" clear-input (ionFocus)='focus("cuilReg")' (ionBlur)='noFocus("cuilReg")' [(ngModel)]="this.cuil"></ion-input>
+        <ion-input type="text" id="correoReg" name="correo" placeholder="Correo electrónico" maxlength="35" clear-input (ionFocus)='focus("correoReg")' (ionBlur)='noFocus("correoReg")' [(ngModel)]="this.correo"></ion-input>
+        <ion-input type="password" id="passReg" name="clave" placeholder="Contraseña" maxlength="25" minlength="4" clear-input (ionFocus)='focus("passReg")' (ionBlur)='noFocus("passReg")' [(ngModel)]="this.clave"></ion-input>
+      </div>
+      <div class="form-button">
+        <button type="submit" id="form-button-register">Registrar</button>
+      </div>
+    </form>  
+  </div>
+</div>
+<div id="modal-error" class="modal-error"> 
+  <div class="modal-error-img">
+    <img src="../../../assets/img/error.webp" alt="">
+  </div>
+  <div class="modal-error-text">
+    <p id="modal-error-text-p"></p>
+  </div>    
+</div>
