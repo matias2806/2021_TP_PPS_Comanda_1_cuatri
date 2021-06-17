@@ -33,7 +33,7 @@ export class AppComponent {
       if(this.splash) { 
         setTimeout(() => {
           this.splash = false;
-          this.router.navigate(['registro']);
+          this.router.navigate(['login']);
          },5000);
        }
     });
