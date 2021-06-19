@@ -6,6 +6,9 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { HomeMozoComponent } from '../components/mozo/home-mozo/home-mozo.component';
+import { MetreComponent } from '../components/metre/metre.component';
+import { DuenioComponent } from '../components/duenio/duenio.component';
+
 
 @NgModule({
   imports: [
@@ -16,7 +19,9 @@ import { HomeMozoComponent } from '../components/mozo/home-mozo/home-mozo.compon
   ],
   declarations: [
     HomePage,
-    HomeMozoComponent
+    HomeMozoComponent,
+    MetreComponent,
+    DuenioComponent
   ]
 })
 export class HomePageModule {}

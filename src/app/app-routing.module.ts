@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ClienteHabilitadoGuard } from "./guards/cliente-habilitado.guard";
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: "home",
+    loadChildren: () =>
+      import("./home/home.module").then((m) => m.HomePageModule),
+    canActivate: [ClienteHabilitadoGuard],
   },
   {
     path: '',
-    redirectTo: 'registro',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -16,7 +19,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'registro',
+    path: 'registro/:perfil',
     loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   },
 ];

@@ -98,10 +98,11 @@ export class LoginPage implements OnInit {
         .then((user) => {
           this.pass = "";
           $("#pass").val("");
-          this.spinner.activateAndRedirect("backdrop", 3000, "home");
+          //this.spinner.activateAndRedirect("backdrop", 3000, "home");
+          this.navegador.navigate(['home']);
         })
         .catch((error) => {
-          console.error(error);
+          console.error(  );
           this.textoMostrar(error.code);
           this.vibrationService.error();
         });
