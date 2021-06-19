@@ -1,3 +1,14 @@
-<p>
-  metre works!
-</p>
+<div class="cnt-home-metre" *ngIf="redirect == 'home'">
+  <div class="btns-home-metre">
+    <div (click)="redirect = 'listaEspera'"><span>Lista de Espera</span></div>
+    <div (click)="redirect = 'listaMesas'"><span>Vista de Mesas</span></div>
+  </div>
+</div>
+<!--app-lista-espera
+  (volver)="redirect = $event"
+  *ngIf="redirect == 'listaEspera'"
+></app-lista-espera>
+<app-listado-mesas
+  (volver)="redirect = $event"
+  *ngIf="redirect == 'listaMesas'"
+></app-listado-mesas-->
