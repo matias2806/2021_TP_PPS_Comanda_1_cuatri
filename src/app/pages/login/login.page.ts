@@ -99,6 +99,7 @@ export class LoginPage implements OnInit {
           this.pass = "";
           $("#pass").val("");
           //this.spinner.activateAndRedirect("backdrop", 3000, "home");
+          console.log('loguea correctamente')
           this.navegador.navigate(['home']);
         })
         .catch((error) => {

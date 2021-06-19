@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FirebaseService } from '../servicios/firebase.service';
 import { SpinnerService } from '../servicios/spinner.service';
-
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -40,7 +40,7 @@ export class HomePage {
 
 
   back() {
-    // this.location.back();
+     this.location.back();
   }
 
 }
