@@ -20,8 +20,8 @@
         </div>
         <ion-input type="text" id="nombreReg" autocapitalize="words" name="nombre" placeholder="Nombre" maxlength="30" clear-input (ionFocus)='focus("nombreReg")' (ionBlur)='noFocus("nombreReg")' [(ngModel)]="this.nombre"></ion-input>
         <ion-input type="text" id="apellidoReg" autocapitalize="words" name="apellido" placeholder="Apellido" maxlength="30" clear-input (ionFocus)='focus("apellidoReg")' (ionBlur)='noFocus("apellidoReg")' [(ngModel)]="this.apellido"></ion-input>
-        <ion-input type="number" id="dniReg" name="dni" placeholder="Nª Documento" inputmode="numeric" maxlength="8" clear-input (ionFocus)='focus("dniReg")' (ionBlur)='noFocus("dniReg")' [(ngModel)]="this.dni"></ion-input>
-        <ion-input [hidden]="this.perfil == 'cliente'" type="text" id="cuilReg" name="cuil" placeholder="Nª Cuil" inputmode="numeric" maxlength="13" clear-input (ionFocus)='focus("cuilReg")' (ionBlur)='noFocus("cuilReg")' [(ngModel)]="this.cuil"></ion-input>
+        <ion-input type="number" id="dniReg" name="dni" placeholder="Nº Documento" inputmode="numeric" maxlength="8" clear-input (ionFocus)='focus("dniReg")' (ionBlur)='noFocus("dniReg")' [(ngModel)]="this.dni"></ion-input>
+        <ion-input [hidden]="this.perfil == 'cliente'" type="text" id="cuilReg" name="cuil" placeholder="Nº Cuil" inputmode="numeric" maxlength="13" clear-input (ionFocus)='focus("cuilReg")' (ionBlur)='noFocus("cuilReg")' [(ngModel)]="this.cuil"></ion-input>
         <ion-input type="text" id="correoReg" name="correo" placeholder="Correo electrónico" maxlength="35" clear-input (ionFocus)='focus("correoReg")' (ionBlur)='noFocus("correoReg")' [(ngModel)]="this.correo"></ion-input>
         <ion-input type="password" id="passReg" name="clave" placeholder="Contraseña" maxlength="25" minlength="4" clear-input (ionFocus)='focus("passReg")' (ionBlur)='noFocus("passReg")' [(ngModel)]="this.clave"></ion-input>
       </div>

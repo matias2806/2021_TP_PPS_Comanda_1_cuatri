@@ -56,18 +56,18 @@ export class RegistroPage implements OnInit {
     {
       this.servicio.registerEmail(this.correo, this.clave).then((a) => {
 
-        if(this.file != null){
-          this.servicio.uploadPhoto(this.file, `${this.perfilSeleccionado.toLowerCase()}/${this.correo}`).then((datos) => {
-            this.url = <string>datos;
-            this.servicio.createDocInDB(`${this.perfilSeleccionado.toLowerCase()}`, this.correo, this.toJSON());
-            this.servicio.sendNotification(this.correo, 'dueño')
-          });
-        }
-        else{
-          this.url = 'default';
-          this.servicio.createDocInDB(`${this.perfilSeleccionado.toLowerCase()}`, this.correo, this.toJSON());
-          this.servicio.sendNotification(this.correo, 'dueño')
-        }
+        // if(this.file != null){
+        //   this.servicio.uploadPhoto(this.file, `${this.perfilSeleccionado.toLowerCase()}/${this.correo}`).then((datos) => {
+        //     this.url = <string>datos;
+        //     this.servicio.createDocInDB(`${this.perfilSeleccionado.toLowerCase()}`, this.correo, this.toJSON());
+        //     this.servicio.sendNotification(this.correo, 'dueño')
+        //   });
+        // }
+        // else{
+          // this.url = 'default';
+          // this.servicio.createDocInDB(`${this.perfilSeleccionado.toLowerCase()}`, this.correo, this.toJSON());
+          // this.servicio.sendNotification(this.correo, 'dueño')
+        // }  
 
         $("#form-button-register").addClass("animation");
         setTimeout(()=> {
