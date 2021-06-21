@@ -24,9 +24,14 @@ import * as $ from "jquery";
 
 import { RegistroPage } from './pages/registro/registro.page';
 import { FormsModule } from '@angular/forms';
+import { ChangeStatusColorDirective } from './directives/change-status-color.directive';
 
 @NgModule({
-  declarations: [AppComponent, RegistroPage],
+  declarations: [
+    AppComponent, 
+    RegistroPage, 
+    ChangeStatusColorDirective
+  ],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -50,4 +55,4 @@ import { FormsModule } from '@angular/forms';
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
