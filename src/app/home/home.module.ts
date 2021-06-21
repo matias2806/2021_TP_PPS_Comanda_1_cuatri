@@ -14,6 +14,7 @@ import { ConsultasComponent } from '../components/mozo/consultas/consultas.compo
 import { PagosComponent } from '../components/mozo/pagos/pagos.component';
 import { PedidosComponent } from '../components/mozo/pedidos/pedidos.component';
 import { PedidosPendientesComponent } from '../components/mozo/pedidos-pendientes/pedidos-pendientes.component';
+import { ChangeStatusColorDirective } from '../directives/change-status-color.directive';
 
 @NgModule({
   imports: [
@@ -33,6 +34,7 @@ import { PedidosPendientesComponent } from '../components/mozo/pedidos-pendiente
     PagosComponent,
     PedidosComponent,
     PedidosPendientesComponent,
+    ChangeStatusColorDirective,
   ]
 })
 export class HomePageModule {}

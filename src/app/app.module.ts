@@ -24,13 +24,12 @@ import * as $ from "jquery";
 
 import { RegistroPage } from './pages/registro/registro.page';
 import { FormsModule } from '@angular/forms';
-import { ChangeStatusColorDirective } from './directives/change-status-color.directive';
+
 
 @NgModule({
   declarations: [
     AppComponent, 
     RegistroPage, 
-    ChangeStatusColorDirective
   ],
   entryComponents: [],
   imports: [
@@ -51,7 +50,6 @@ import { ChangeStatusColorDirective } from './directives/change-status-color.dir
     Camera,
     BarcodeScanner,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    StatusBar
   ],
   bootstrap: [AppComponent],
 })
