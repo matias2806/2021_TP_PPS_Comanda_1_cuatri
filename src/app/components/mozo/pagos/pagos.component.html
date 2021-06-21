@@ -1,0 +1,43 @@
+<ion-icon name="close-circle-sharp" (click)="back()"></ion-icon>
+<div class="ctn-lista-mesas">
+  <div class="lista-mesas">
+    <div class="mesas {{mesa.ocupada}}" *ngFor="let mesa of this.mesas">
+      <span>{{mesa.numero}}</span>
+      <div class="ctn-notificaciones">
+        <div *ngIf="mesa.pagoPendiente" (click)="paymentConfirmation = true; mesaParaPagar = mesa">$</div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="btn-actualizar-mesas" (click)="actualizarLista()">
+    <span>Actualizar</span>
+  </div>
+</div>
+
+<div class="order-confirmation-menu" *ngIf="paymentConfirmation">
+    <div class="content-order-confirmation">
+      <p class="tittle-order-confirmation ">¿Confirma el pago?</p>
+      <div class="food">
+        <ul>
+          <li *ngIf="mesaParaPagar.pedido.productos.platos.milanesa.cantidad > 0"><p>Milanesa: {{mesaParaPagar.pedido.productos.platos.milanesa.cantidad}}</p><p>${{mesaParaPagar.pedido.productos.platos.milanesa.precio}}</p></li>
+          <li *ngIf="mesaParaPagar.pedido.productos.platos.fideos.cantidad > 0"><p>Fideos: {{mesaParaPagar.pedido.productos.platos.fideos.cantidad}}</p><p>${{mesaParaPagar.pedido.productos.platos.fideos.precio}}</p></li>
+          <li *ngIf="mesaParaPagar.pedido.productos.platos.muzzarelitas.cantidad > 0"><p>Muzzarelitas: {{mesaParaPagar.pedido.productos.platos.muzzarelitas.cantidad}}</p><p>${{mesaParaPagar.pedido.productos.platos.muzzarelitas.precio}}</p></li>
+          <li *ngIf="mesaParaPagar.pedido.productos.platos.hamburguesa.cantidad > 0"><p>Hamburguesa: {{mesaParaPagar.pedido.productos.platos.hamburguesa.cantidad}}</p><p>${{mesaParaPagar.pedido.productos.platos.hamburguesa.precio}}</p></li>
+          <li *ngIf="mesaParaPagar.pedido.productos.bebidas.agua.cantidad > 0"><p>Agua: {{mesaParaPagar.pedido.productos.bebidas.agua.cantidad}}</p><p>${{mesaParaPagar.pedido.productos.bebidas.agua.precio}}</p></li>
+          <li *ngIf="mesaParaPagar.pedido.productos.bebidas.cerveza.cantidad > 0"><p>Cerveza: {{mesaParaPagar.pedido.productos.bebidas.cerveza.cantidad}}</p><p>${{mesaParaPagar.pedido.productos.bebidas.cerveza.precio}}</p></li>
+          <li *ngIf="mesaParaPagar.pedido.productos.bebidas.gaseosa.cantidad > 0"><p>Gaseosa: {{mesaParaPagar.pedido.productos.bebidas.gaseosa.cantidad}}</p><p>${{mesaParaPagar.pedido.productos.bebidas.gaseosa.precio}}</p></li>
+          <li *ngIf="mesaParaPagar.pedido.productos.postres.chocotorta.cantidad > 0"><p>Chocotorta: {{mesaParaPagar.pedido.productos.postres.chocotorta.cantidad}}</p><p>${{mesaParaPagar.pedido.productos.postres.chocotorta.precio}}</p></li>
+          <li *ngIf="mesaParaPagar.pedido.productos.postres.flan.cantidad > 0"><p>Flan: {{mesaParaPagar.pedido.productos.postres.flan.cantidad}}</p><p>${{mesaParaPagar.pedido.productos.postres.flan.precio}}</p></li>
+          <li *ngIf="mesaParaPagar.pedido.productos.postres.helado.cantidad > 0"><p>Helado: {{mesaParaPagar.pedido.productos.postres.helado.cantidad}}</p><p>${{mesaParaPagar.pedido.productos.postres.helado.precio}}</p></li>
+          <li><p>Propina: </p><p>${{mesaParaPagar.pedido.propina}}</p></li>
+        </ul>
+      </div>
+      <p class="food-total-amount">Total: ${{mesaParaPagar.pedido.totalConPropina}}.-</p>
+      <div class="confirmation-buttons-menu">
+        <div class="button-menu confirm" (click)="cambiarEstadoPago()" ><p>Confirmar</p></div>
+        <div class="button-menu cancel" (click)="paymentConfirmation=false"><p>Cancelar</p></div>
+      </div>  
+    </div>
+  </div>
