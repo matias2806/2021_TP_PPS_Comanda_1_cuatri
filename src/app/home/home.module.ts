@@ -8,7 +8,7 @@ import { DuenioComponent } from '../components/duenio/duenio.component';
 import { HomeMozoComponent } from '../components/mozo/home-mozo/home-mozo.component';
 import { HomePageRoutingModule } from './home-routing.module';
 import { HomeMetreComponent } from '../components/metre/metre.component';
-
+import { BartenderComponent } from '../components/bartender/bartender.component';
 
 @NgModule({
   imports: [
@@ -21,6 +21,8 @@ import { HomeMetreComponent } from '../components/metre/metre.component';
     HomePage,
     DuenioComponent,
     HomeMozoComponent,
-    HomeMetreComponent]
+    HomeMetreComponent,
+    BartenderComponent,
+  ]
 })
 export class HomePageModule {}
