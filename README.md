@@ -1,8 +1,8 @@
-
+<div align="center">
 # TP PPS (ReComiendo)
 
 ![](src/assets/README-imagenes/login.gif "Pantalla:")
-
+</div>
 ### Programadores :iphone:
 
 ``` 
