@@ -10,6 +10,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { HomeMetreComponent } from '../components/metre/metre.component';
 import { BartenderComponent } from '../components/bartender/bartender.component';
 import { CocineroComponent } from '../components/cocinero/cocinero.component';
+import { ConsultasComponent } from '../components/mozo/consultas/consultas.component';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { CocineroComponent } from '../components/cocinero/cocinero.component';
     HomeMetreComponent,
     BartenderComponent,
     CocineroComponent,
+    ConsultasComponent,
   ]
 })
 export class HomePageModule {}
