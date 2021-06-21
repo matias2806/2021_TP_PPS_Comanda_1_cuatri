@@ -12,6 +12,7 @@ import { BartenderComponent } from '../components/bartender/bartender.component'
 import { CocineroComponent } from '../components/cocinero/cocinero.component';
 import { ConsultasComponent } from '../components/mozo/consultas/consultas.component';
 import { PagosComponent } from '../components/mozo/pagos/pagos.component';
+import { PedidosComponent } from '../components/mozo/pedidos/pedidos.component';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import { PagosComponent } from '../components/mozo/pagos/pagos.component';
     CocineroComponent,
     ConsultasComponent,
     PagosComponent,
+    PedidosComponent,
   ]
 })
 export class HomePageModule {}
