@@ -25,8 +25,12 @@ import * as $ from "jquery";
 import { RegistroPage } from './pages/registro/registro.page';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
-  declarations: [AppComponent, RegistroPage],
+  declarations: [
+    AppComponent, 
+    RegistroPage, 
+  ],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -46,8 +50,7 @@ import { FormsModule } from '@angular/forms';
     Camera,
     BarcodeScanner,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    StatusBar
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
