@@ -1,0 +1,20 @@
+<ion-icon name="close-circle-sharp" (click)="back()"></ion-icon>
+
+<div class="cnt-pedidos">
+  <div class="template-lista">
+    <div class="cnt-listado-pedidos">
+      <span id="msj-pedidos"></span>
+      <ul>
+        <li *ngFor="let pedido of this.pedidos">
+          Pedido mesa {{pedido.numero}}
+          <div class="listado-pedidos-icons">
+            <ion-icon name="checkmark-sharp" (click)="this.cambiarEstado('habilitar',pedido)"></ion-icon>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="btn-actualizar-mesas" (click)="Actualizar()">
+    <span>Actualizar</span>
+  </div>
+</div>

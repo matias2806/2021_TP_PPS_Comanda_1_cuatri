@@ -1,0 +1,108 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'cicero';
+}
+
+ion-icon {
+    font-size: 3.5em;
+    color: #000000;
+    position: absolute;
+    transition: all ease 0.3s;
+    z-index: 10;
+}
+
+.template-lista {
+    background: url(../../../../assets/img/template-lista.png) center;
+    background-size: cover;
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cnt-pedidos
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.cnt-listado-pedidos
+{
+    width: 70%;
+    height: 80%;
+    background: #fff;
+    border-radius: 5px;
+    border-radius: #fff;
+    //box-shadow: 25px -22px 0px 2px rgb(228, 228, 228);
+    overflow: auto;
+    position: relative;
+    top: 5%;
+    text-align: center;
+}
+
+.cnt-listado-pedidos span {
+    color: black;
+}
+
+.cnt-listado-pedidos ul
+{
+    list-style: none;
+    padding: 5%;
+}
+
+.cnt-listado-pedidos li
+{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+    box-shadow: inset 0px 0px 20px 1px rgb(94, 20, 197);
+    border-radius: 30px;
+    margin-top: 5%;
+}
+
+.listado-pedidos-icons
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.listado-pedidos-icons ion-icon
+{
+    font-size: 1.5em;
+    border: 1px solid;
+    border-radius: 50%;
+    background: rgb(52, 151, 13);
+    color: ghostwhite;
+}
+
+.btn-actualizar-mesas {
+    border-radius: 5%;
+    width: 75%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2488CA;
+    box-shadow: 0px 18px 15px -10px rgba(0,0,0,0.75);
+    transition: all ease 0.2s;
+    margin-top: 5%;
+    font-size: 1.5em;
+
+    &:active {
+         background: #8b0101;
+    }
+}
+

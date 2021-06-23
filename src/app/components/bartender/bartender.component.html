@@ -1,0 +1,28 @@
+<div class="ctn-lista-mesas">
+  <div class="lista-mesas">
+    <div class="mesas {{mesa.ocupada}}" *ngFor="let mesa of this.consultas">
+      <span>{{mesa.numero}}</span>
+      <div class="ctn-notificaciones">
+        <div *ngIf="mesa.pendienteBebida" (click)="displayModal(mesa)"><ion-icon name="wine-outline"></ion-icon></div>
+      </div>
+    </div>
+  </div>
+  <div class="btn-asignar-mesa" (click)="actualizarLista()">
+    <span>Actualizar</span>
+  </div>
+</div>
+<div class="cnt-modal-listado-bebidas" *ngIf="this.mesaSeleccionada">
+  <div class="modal-listado-bebidas">
+    <p>Listado bebidas</p>
+    <ul>
+      <li *ngFor="let bebidas of this.mesaSeleccionada.pedido.productos.bebidas | bebidaNuevo">
+        <span>{{bebidas.bebida}}</span>
+        <span>{{bebidas.cantidad}}</span>
+      </li>
+    </ul>
+    <div class="modal-listado-bebidas-buttons">
+      <button (click)="terminarPedido(mesaSeleccionada.numero)">Terminar</button>
+      <button (click)="this.quitModal()">Cancelar</button>
+    </div>
+  </div>
+</div>
