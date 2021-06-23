@@ -1,0 +1,76 @@
+<ion-icon name="close-circle-sharp" (click)="back()"></ion-icon>
+<div class="ctn-lista-mesas">
+  <div class="lista-mesas">
+    <div class="mesas {{ mesa.ocupada }}" *ngFor="let mesa of this.pedidos">
+      <span>{{ mesa.numero }}</span>
+      <div class="ctn-notificaciones">
+        <div class="ctn-iconitos">
+          <div>
+            <ion-icon
+              name="wine-outline"
+              (click)="mesaSeleccionadaBebida = mesa"
+            ></ion-icon>
+          </div>
+          <div>
+            <ion-icon
+              name="fast-food-outline"
+              (click)="mesaSeleccionadaComida = mesa"
+            ></ion-icon>
+          </div>
+          <div *ngIf="terminado(mesa)">
+            <ion-icon
+              (click)="entregar(mesa.numero)"
+              name="checkmark-done-outline"
+            ></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-asignar-mesa" (click)="actualizarLista()">
+    <span>Actualizar</span>
+  </div>
+</div>
+
+<div class="cnt-modal-listado-comidas" *ngIf="this.mesaSeleccionadaComida">
+  <div class="modal-listado-comidas">
+    <ion-icon
+      name="close-circle-sharp"
+      (click)="this.mesaSeleccionadaComida = undefined"
+    ></ion-icon>
+    <p>Listado platos</p>
+    <ul>
+      <li
+        *ngFor="
+          let plato of this.mesaSeleccionadaComida.pedido.productos
+            | comidaNuevo
+        "
+      >
+        <span>{{ plato.comida }}</span>
+        <span>{{ plato.cantidad }}</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="cnt-modal-listado-comidas" *ngIf="this.mesaSeleccionadaBebida">
+  <div class="modal-listado-comidas">
+    <ion-icon
+      name="close-circle-sharp"
+      (click)="this.mesaSeleccionadaBebida = undefined"
+    ></ion-icon>
+    <p>Listado bebidas</p>
+    <ul>
+      <li
+        *ngFor="
+          let bebidas of this.mesaSeleccionadaBebida.pedido.productos.bebidas
+            | bebidaNuevo
+        "
+      >
+        <span>{{ bebidas.bebida }}</span>
+        <span>{{ bebidas.cantidad }}</span>
+      </li>
+    </ul>
+  </div>
+</div>
