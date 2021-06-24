@@ -1,0 +1,25 @@
+<ion-icon name="close-circle-sharp" (click)="back()"></ion-icon>
+<div class="cnt-espera" *ngIf="!this.clienteSeleccionado">
+  <div class="template-lista">
+    <div class="cnt-listado-espera">
+      <span id="msj-espera"></span>
+      <ul>
+        <li
+          *ngFor="let cliente of this.clientes"
+          (click)="selectCustomer(cliente)"
+        >
+          {{ cliente.nombre }} {{ cliente.apellido }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="btn-update-lista" (click)="traerLista()">
+    <span>Actualizar lista</span>
+  </div>
+</div>
+<app-listado-mesas
+  (volver)="handleReturnEvent()"
+  [showOwnControls]="showOwnControls"
+  [clienteSeleccionado]="this.clienteSeleccionado"
+  *ngIf="this.clienteSeleccionado"
+></app-listado-mesas>

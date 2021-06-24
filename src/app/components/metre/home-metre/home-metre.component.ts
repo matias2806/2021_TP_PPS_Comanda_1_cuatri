@@ -1,12 +1,11 @@
-  
 import { Component, OnInit } from "@angular/core";
 import { AngularFirestore } from "angularfire2/firestore";
 import * as $ from "jquery";
 
 @Component({
   selector: "app-home-metre",
-  templateUrl: "./metre.component.html",
-  styleUrls: ["./metre.component.scss"],
+  templateUrl: "./home-metre.component.html",
+  styleUrls: ["./home-metre.component.scss"],
 })
 export class HomeMetreComponent implements OnInit {
   redirect: string = "home";

@@ -1,0 +1,18 @@
+<ion-icon name="close-circle-sharp" class="exit" (click)="back()"></ion-icon>
+<div class="cnt-solicitudes">
+  <div class="template-lista">
+    <div class="cnt-listado-solicitudes">
+      <span id="msj-solicitudes"></span>
+      <ul>
+        <li *ngFor="let cliente of this.clientes">
+          {{cliente.nombre}} {{cliente.apellido}}
+          <div class="listado-solicitudes-icons">
+            <ion-icon name="checkmark-sharp" (click)="this.cambiarEstado('habilitar',cliente)"></ion-icon>
+            <ion-icon name="close-sharp" (click)="this.cambiarEstado('deshabilitar',cliente)"></ion-icon>
+          </div>
+        </li>
+      </ul>
+      <div (click)="actualizar()" class="refresh"><span>Actualizar</span></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<ion-icon
+  name="close-circle-sharp"
+  (click)="back()"
+  *ngIf="showOwnControls"
+></ion-icon>
+<div class="ctn-lista-mesas">
+  <div class="lista-mesas">
+    <div
+      class="mesas {{ mesa.asignacion }}"
+      (click)="seleccionarMesa(mesa)"
+      *ngFor="let mesa of this.mesas"
+    >
+      {{ mesa.numero }}
+    </div>
+  </div>
+
+  <div class="btn-asignar-mesa" (click)="actualizarLista()">
+    <span>Actualizar</span>
+  </div>
+</div>
+
+<div id="modal-error-mesa" class="modal-error">
+  <div class="modal-error-img">
+    <img src="../../../../assets/img/banana-podrida.gif" alt="" />
+  </div>
+  <div class="modal-error-text">
+    <p id="modal-error-mesa-text-p"></p>
+  </div>
+</div>

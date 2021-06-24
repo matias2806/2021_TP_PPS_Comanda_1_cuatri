@@ -19,17 +19,19 @@ import { BarcodeScanner } from "@ionic-native/barcode-scanner/ngx";
 import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import * as $ from "jquery";
-//import { ComidaNuevoPipe } from "./pipes/comida-nuevo.pipe";
-//import { BebidaNuevoPipe } from "./pipes/bebida-nuevo.pipe";
 
 import { RegistroPage } from './pages/registro/registro.page';
 import { FormsModule } from '@angular/forms';
+import { BebidasPipe } from './pipes/bebidas.pipe';
+import { BebidaNuevoPipe } from './pipes/bebida-nuevo.pipe';
+import { ComidasPipe } from './pipes/comidas.pipe';
+import { ComidaNuevoPipe } from './pipes/comida-nuevo.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent, 
-    RegistroPage, 
+    RegistroPage, BebidasPipe, BebidaNuevoPipe, ComidasPipe, ComidaNuevoPipe, 
   ],
   entryComponents: [],
   imports: [
