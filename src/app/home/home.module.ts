@@ -17,6 +17,8 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { BartenderComponent } from '../components/bartender/bartender.component';
 import { CocineroComponent } from '../components/cocinero/cocinero.component';
 import { ConsultasComponent } from '../components/mozo/consultas/consultas.component';
+import { MenuComponent } from '../components/menu/menu.component';
+import { SolicitudesComponent } from '../components/solicitudes/solicitudes.component';
 import { PagosComponent } from '../components/mozo/pagos/pagos.component';
 import { PedidosComponent } from '../components/mozo/pedidos/pedidos.component';
 import { PedidosPendientesComponent } from '../components/mozo/pedidos-pendientes/pedidos-pendientes.component';
@@ -36,13 +38,9 @@ import { ChangeStatusColorDirective } from '../directives/change-status-color.di
     HomeMetreComponent,
     BartenderComponent,
     CocineroComponent,
-    ClienteComponent,
-    ListadoMesasComponent,
-    ListaEsperaComponent,
-    EncuestaComponent,
-    EstadoPedidoComponent,
-    ClienteDespedidaComponent,
+    MenuComponent,
     ConsultasComponent,
+    SolicitudesComponent,
     PagosComponent,
     PedidosComponent,
     PedidosPendientesComponent,
