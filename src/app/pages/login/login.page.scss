@@ -24,7 +24,7 @@ h1
 {
     text-align: center;
     font-family: "resto";
-    font-size: 3.5em;
+    font-size: 2.5em;
     letter-spacing: 1px;
     padding: 10%;
 }
@@ -48,11 +48,10 @@ h1
     padding-right: 2vw;
 }
 #botonUsuario, #botonInvitado {
-    background: #2488CA;
+    background: #78c1ad;
     width: 100%;
     height: 70%;
     color: ghostwhite;
-    border-radius: 5px;
     border: none;
     outline: none;
     transition: 0.5s;
@@ -118,11 +117,10 @@ form
 
 #submit, #submitInvitado
 {
-    background: #2488ca; //rgba(65, 32, 119, 0.9);
+    background: #78c1ad; //rgba(65, 32, 119, 0.9);
     width: 100%;
     height: 100%;
     color: ghostwhite;
-    border-radius: 5px;
     border: none;
     outline: none;
     transition: 0.3s;
@@ -132,11 +130,11 @@ form
 
 #submit:active, #submitInvitado:active
 {
-    background: #01097a //rgb(42, 21, 77);
+    background: #57cc9c //rgb(42, 21, 77);
 }
 
 #registrate {
-    color: rgb(36, 136, 202);
+    color: #78c1ad;
     font-weight: bold;
 }
 
@@ -160,7 +158,6 @@ form
     height: 7vh;
     top: 95%;
     background: rgba(234, 0, 0, 0.85);
-    border-radius: 5px;
     font-size: 1.1em;
 }
 
