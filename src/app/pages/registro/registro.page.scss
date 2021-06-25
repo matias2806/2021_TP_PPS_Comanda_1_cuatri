@@ -99,8 +99,7 @@ ion-input
     height: 6vh;
     width: 70%;
     font-size: 1em;
-    border-radius: 30px;
-    background: #2488ca;
+    background: #78c1ad;
     outline: none;
     font-weight: bold;
 }
@@ -185,10 +184,9 @@ ion-icon
 }
 
 .botones-registro button {
-    background: #3a9fe2; 
+    background: #78c1ad; 
     width: 100%;
     height: 35%;
-    border-radius: 25px;
     border: none;
     outline: none;
     transition: 0.3s;
@@ -198,7 +196,7 @@ ion-icon
 }
 
 .botones-registro button:active{
-    background: #01097a //rgb(42, 21, 77);
+    background: #57cc9c //rgb(42, 21, 77);
 }
 
 .form-input-select

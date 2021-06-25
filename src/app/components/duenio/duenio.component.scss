@@ -1,6 +1,6 @@
 p {
-    color: black;
-    font-size: 2em;
+    color: white;
+    font-size: 1.5em;
     font-family: 'cicero';
 }
 
@@ -13,17 +13,13 @@ p {
     flex-direction: column;
     margin-top: 25px;
     & .btn-alta, .btn-solicitudes {
-        border-radius: 50%;
-        width: 75%;
-        height: 45%;
+        width: 60vw;
+        height: 7vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #2488CA;
-        //box-shadow: 0px 0px 30px 15px rgba(0,0,0,0.75);
-        box-shadow: inset 0px 0px 40px 10px rgba(0,0,0,0.8);
-        min-height: 215px;
-
+        background: #78c1ad;
+        min-height: 150px;
     }
 }
 
