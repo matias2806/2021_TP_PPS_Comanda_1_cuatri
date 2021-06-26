@@ -43,7 +43,7 @@ export class PedidosPendientesComponent implements OnInit {
           this.pedidosService.changeOrderStatus(
             "estado",
             "terminado",
-            `Mesa ${mesita.numero} Buenos Muchachos`
+            `Mesa ${mesita.numero} ReComiendo`
           );
         }
       }
@@ -54,7 +54,7 @@ export class PedidosPendientesComponent implements OnInit {
     this.pedidosService.changeOrderStatus(
       "estado",
       "entregado",
-      `Mesa ${mesa} Buenos Muchachos`
+      `Mesa ${mesa} ReComiendo`
     );
     this.actualizarLista();
   }

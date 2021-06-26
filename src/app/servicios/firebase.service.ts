@@ -317,10 +317,10 @@ export class FirebaseService {
   getTable(id: string) {
     return new Promise((resolve, reject) => {
       if (
-        id == "Mesa 1 Buenos Muchachos" ||
-        id == "Mesa 2 Buenos Muchachos" ||
-        id == "Mesa 3 Buenos Muchachos" ||
-        id == "Mesa 4 Buenos Muchachos"
+        id == "Mesa 1 ReComiendo" ||
+        id == "Mesa 2 ReComiendo" ||
+        id == "Mesa 3 ReComiendo" ||
+        id == "Mesa 4 ReComiendo"
       ) {
         this.db
           .collection("mesas")

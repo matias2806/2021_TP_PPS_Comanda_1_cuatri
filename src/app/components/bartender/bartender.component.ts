@@ -80,10 +80,10 @@ export class BartenderComponent implements OnInit {
     this.pedidosService.changeOrderStatus(
       "pendienteBebida",
       false,
-      `Mesa ${numeroMesa} Buenos Muchachos`
+      `Mesa ${numeroMesa} ReComiendo`
     );
     this.fireService.sendNotification(
-      `Mesa ${numeroMesa} Buenos Muchachos`,
+      `Mesa ${numeroMesa} ReComiendo`,
       "mozoBebida"
     );
     this.actualizarLista();

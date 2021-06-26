@@ -136,7 +136,7 @@ export class ClienteComponent implements OnInit {
 
   scanListaDeEspera() {
     this.QRService.scan().then((a: any) => {
-      if (a.text == "listaDeEsperaBuenosMuchachos") {
+      if (a.text == "listaDeEsperaReComiendo") {
         if (!this.currentUser.isAnonymous)
           this.fireService.createDocInDB(
             "listaEspera",
@@ -181,28 +181,28 @@ export class ClienteComponent implements OnInit {
                 data.asignacion = "true";
                 data.cliente = this.dataCurrentUser;
                 switch (a.text) {
-                  case "Mesa 1 Buenos Muchachos":
+                  case "Mesa 1 ReComiendo":
                     this.fireService.updateDoc("mesas", a.text, data);
                     this.estadoCliente = "enMesa";
-                    this.mesaOcupada = "Mesa 1 Buenos Muchachos";
+                    this.mesaOcupada = "Mesa 1 ReComiendo";
                     break;
 
-                  case "Mesa 2 Buenos Muchachos":
+                  case "Mesa 2 ReComiendo":
                     this.fireService.updateDoc("mesas", a.text, data);
                     this.estadoCliente = "enMesa";
-                    this.mesaOcupada = "Mesa 2 Buenos Muchachos";
+                    this.mesaOcupada = "Mesa 2 ReComiendo";
                     break;
 
-                  case "Mesa 3 Buenos Muchachos":
+                  case "Mesa 3 ReComiendo":
                     this.fireService.updateDoc("mesas", a.text, data);
                     this.estadoCliente = "enMesa";
-                    this.mesaOcupada = "Mesa 3 Buenos Muchachos";
+                    this.mesaOcupada = "Mesa 3 ReComiendo";
                     break;
 
-                  case "Mesa 4 Buenos Muchachos":
+                  case "Mesa 4 ReComiendo":
                     this.fireService.updateDoc("mesas", a.text, data);
                     this.estadoCliente = "enMesa";
-                    this.mesaOcupada = "Mesa 4 Buenos Muchachos";
+                    this.mesaOcupada = "Mesa 4 ReComiendo";
                     break;
 
                   default:
@@ -238,7 +238,7 @@ export class ClienteComponent implements OnInit {
 
   scanEncuesta() {
     this.QRService.scan().then((a: any) => {
-      if (a.text == "Encuesta Buenos Muchachos") {
+      if (a.text == "Encuesta ReComiendo") {
         this.encuesta = true;
       }
     });

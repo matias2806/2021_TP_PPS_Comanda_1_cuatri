@@ -12,8 +12,8 @@ import { VibrationService } from "src/app/servicios/vibration.service";
   styleUrls: ["./estado-pedido.component.scss"],
 })
 export class EstadoPedidoComponent implements OnInit {
-  @Input() mesaOcupada: string = "Mesa 1 Buenos Muchachos";
-  @Input() mesaPedido: string = "Mesa 1 Buenos Muchachos";
+  @Input() mesaOcupada: string = "Mesa 1 ReComiendo";
+  @Input() mesaPedido: string = "Mesa 1 ReComiendo";
   @Output() volver: EventEmitter<any> = new EventEmitter<any>();
   mesa: any;
   estado: string;
