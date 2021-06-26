@@ -40,15 +40,15 @@ export class SolicitudesComponent implements OnInit {
       cliente.habilitado = "aceptado";
       this.fireService.sendEmail(
         cliente,
-        "�Usted ha sido aceptado, bienvenido a Buenos Muchachos!",
-        "Respuesta solicitud registro Buenos Muchachos Rest�"
+        "�Usted ha sido aceptado, bienvenido a ReComiendo!",
+        "Respuesta solicitud registro ReComiendo Rest�"
       );
     } else {
       cliente.habilitado = "rechazado";
       this.fireService.sendEmail(
         cliente,
         "Lo sentimos, pero usted ha sido rechazado",
-        "Respuesta solicitud registro Buenos Muchachos Rest�"
+        "Respuesta solicitud registro ReComiendo Rest�"
       );
     }
 

@@ -35,7 +35,7 @@ export class ConsultasComponent implements OnInit {
     this.consultaMesa.consulta = "";
     this.fireService.updateDoc(
       "mesas",
-      `Mesa ${this.consultaMesa.numero} Buenos Muchachos`,
+      `Mesa ${this.consultaMesa.numero} ReComiendo`,
       this.consultaMesa
     );
     this.actualizarLista();
