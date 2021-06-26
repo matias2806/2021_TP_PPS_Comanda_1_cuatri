@@ -1,0 +1,41 @@
+<ion-icon name="close-circle-sharp" (click)="back()"></ion-icon>
+
+<div class="cnt-consultas">
+  <div class="template-lista">
+    <div class="cnt-listado-consultas">
+      <span id="msj-consulta-mozo" *ngIf="this.mesas?.length == 0"
+        >No hay consultas pendientes</span
+      >
+      <ul>
+        <li *ngFor="let mesa of this.mesas" (click)="seleccionarMesa(mesa)">
+          Consulta mesa {{ mesa.numero }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="btn-actualizar-mesas" (click)="actualizarLista()">
+    <span>Actualizar</span>
+  </div>
+</div>
+
+<div class="consulta-confirmation-menu" *ngIf="consultaConfirmation">
+  <div class="content-consulta-confirmation">
+    <p class="title-consulta-confirmation">
+      Consulta mesa {{ consultaMesa.numero }}
+    </p>
+    <div class="consulta">
+      <p>{{ consultaMesa.consulta }}</p>
+    </div>
+    <div class="confirmation-buttons-menu">
+      <div
+        class="button-menu confirm"
+        (click)="cerrarConsulta(); consultaConfirmation = false"
+      >
+        <p>Confirmar</p>
+      </div>
+      <div class="button-menu cancel" (click)="consultaConfirmation = false">
+        <p>Cancelar</p>
+      </div>
+    </div>
+  </div>
+</div>

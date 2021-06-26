@@ -1,0 +1,11 @@
+<div class="container-duenio"  *ngIf="!this.solicitudes">
+  <div class=" btn-alta" routerLink="/registro/otros" >
+    <p class="color">Alta empleado</p>
+  </div>
+  <div class="  btn-alta" (click)="this.verSolicitudes()">
+    <p class="color">Solicitudes</p>
+  </div>
+</div>
+<div class="solicitudes" *ngIf="this.solicitudes">
+  <app-solicitudes (volver)="solicitudes = $event"></app-solicitudes>
+</div>
