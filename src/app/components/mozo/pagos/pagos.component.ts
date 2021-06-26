@@ -33,11 +33,11 @@ export class PagosComponent implements OnInit {
   cambiarEstadoPago() {
     this.pedidosService.sendQueryPayment(
       false,
-      `Mesa ${this.mesaParaPagar.numero} Buenos Muchachos`
+      `Mesa ${this.mesaParaPagar.numero} ReComiendo`
     );
     this.fireService.updateDoc(
       "mesas",
-      `Mesa ${this.mesaParaPagar.numero} Buenos Muchachos`,
+      `Mesa ${this.mesaParaPagar.numero} ReComiendo`,
       {
         cliente: {},
         consulta: "",

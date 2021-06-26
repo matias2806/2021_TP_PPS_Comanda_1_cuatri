@@ -47,7 +47,7 @@ export class PedidosComponent implements OnInit {
 
     this.fireService.updateDoc(
       "mesas",
-      `Mesa ${pedido.numero} Buenos Muchachos`,
+      `Mesa ${pedido.numero} ReComiendo`,
       pedido
     );
     this.Actualizar();

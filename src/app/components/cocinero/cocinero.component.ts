@@ -80,10 +80,10 @@ export class CocineroComponent implements OnInit {
     this.pedidosService.changeOrderStatus(
       "pendienteComida",
       false,
-      `Mesa ${numeroMesa} Buenos Muchachos`
+      `Mesa ${numeroMesa} ReComiendo`
     );
     this.fireService.sendNotification(
-      `Mesa ${numeroMesa} Buenos Muchachos`,
+      `Mesa ${numeroMesa} ReComiendo`,
       "mozoComida"
     );
     this.actualizarLista();
