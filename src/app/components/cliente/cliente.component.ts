@@ -227,7 +227,11 @@ export class ClienteComponent implements OnInit {
               }
             } else if (this.estadoCliente == "encuesta") {
               this.estadoCliente = "opts";
-            } else {
+            }
+            else if(this.estadoCliente == "estadistica") {
+              this.estadoCliente = "opts";
+            }
+            else {
               console.log("Codigo incorrecto");
             }
           });
@@ -295,5 +299,10 @@ export class ClienteComponent implements OnInit {
     setTimeout(() => {
       $("#notificacion-push").css("top", "-15%");
     }, 3000);
+  }
+
+  estadisticas(){
+    console.log("TA");
+    this.route.navigate(['estadisticas']);
   }
 }

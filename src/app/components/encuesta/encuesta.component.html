@@ -3,7 +3,7 @@
       <form ngNativeValidate (ngSubmit)="this.finalizarEncuesta()">
           <div class="encuesta-textarea">
               <p>*Ingrese un breve comentario</p>
-              <textarea name="" id="encuesta-textarea" cols="30" rows="10" required></textarea>
+              <textarea name="" id="encuesta-textarea" cols="20" rows="2" required></textarea>
           </div>
           <hr>
           <div class="encuesta-radio">
@@ -37,10 +37,6 @@
                     {{this.files.length}}
                 </li>
             </ul>
-          </div>
-          <div class="encuesta-button">
-              <input type="submit">
-              <button type="button" (click)="this.cancelar.emit(undefined)">Cancelar</button>
           </div>
       </form>
   </div>

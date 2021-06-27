@@ -19,12 +19,14 @@ import { ListaEsperaComponent  } from '../components/metre/lista-espera/lista-es
 import { BartenderComponent } from '../components/bartender/bartender.component';
 import { CocineroComponent } from '../components/cocinero/cocinero.component';
 import { EncuestaComponent } from '../components/encuesta/encuesta.component';
+import { EstadisticasComponent } from '../components/estadisticas/estadisticas.component';
 import { PedidosPendientesComponent } from '../components/mozo/pedidos-pendientes/pedidos-pendientes.component';
 import { EstadoPedidoComponent } from '../components/estado-pedido/estado-pedido.component';
 import { ClienteDespedidaComponent } from '../components/cliente/cliente-despedida/cliente-despedida.component';
 import { ChangeStatusColorDirective } from '../directives/change-status-color.directive'
 import { ComidaNuevoPipe } from '../pipes/comida-nuevo.pipe';
 import { BebidaNuevoPipe } from '../pipes/bebida-nuevo.pipe';
+
 
 
 @NgModule({
@@ -51,6 +53,7 @@ import { BebidaNuevoPipe } from '../pipes/bebida-nuevo.pipe';
     BartenderComponent,
     CocineroComponent,
     EncuestaComponent,
+    EstadisticasComponent,
     PedidosPendientesComponent,
     EstadoPedidoComponent,
     ClienteDespedidaComponent,
