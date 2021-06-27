@@ -362,7 +362,7 @@ export class FirebaseService {
   sendEmail(cliente: any, cuerpo: any, subject: string) {
     try {
       this.http
-        .post(`https://us-central1-dlp-labo4.cloudfunctions.net/mailer`, {
+        .post(`https://mailer-send-recomiendo.herokuapp.com/send-email`, {
           to: cliente.correo,
           message: cuerpo,
           subject: subject,
