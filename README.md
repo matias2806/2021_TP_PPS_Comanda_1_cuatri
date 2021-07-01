@@ -37,6 +37,23 @@ misma como nuestro gestor de datos.
 ![](src/assets/README-imagenes/QR/listaDeEsperaReComiendo.png "Pantalla:")
 
 
+### Calificación para propinas QR :question:
+
+#### Propina Excelente
+![](src/assets/README-imagenes/propinasQR/1_-_Excelente_20.png "Pantalla:")
+
+#### Propina Muy Bien
+![](src/assets/README-imagenes/propinasQR/2_-_Muy_bien_15.png "Pantalla:")
+
+#### Propina Bien
+![](src/assets/README-imagenes/propinasQR/3_-_Bien_10.png "Pantalla:")
+
+#### Propina Regular
+![](src/assets/README-imagenes/propinasQR/4_-_Regular_5.png "Pantalla:")
+
+#### Propina Mala
+![](src/assets/README-imagenes/propinasQR/5_-_Malo_0.png "Pantalla:")
+
 # Paso a Paso
 
 
