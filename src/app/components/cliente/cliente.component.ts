@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, Output, Input,EventEmitter } from "@angular/core";
 import { QRScannerService } from "src/app/servicios/qrscanner.service";
 import { FirebaseService } from "src/app/servicios/firebase.service";
 import { PedidosService } from "src/app/servicios/pedidos.service";
@@ -26,6 +26,8 @@ export class ClienteComponent implements OnInit {
   encuestaTerminada: boolean = false;
   clienteEnMesa: boolean = false;
   clienteEsperandoPedido: boolean = false;
+  propina: number = null;
+
   constructor(
     private QRService: QRScannerService,
     private fireService: FirebaseService,
@@ -117,6 +119,10 @@ export class ClienteComponent implements OnInit {
     }
   }
 
+  @Input() mesa:string;
+  @Output() finalizarPropina : EventEmitter<any> = new EventEmitter<any>();
+  mesaData:any;
+
   ngOnInit() {
     this.db
       .collection("notificaciones")
@@ -132,6 +138,10 @@ export class ClienteComponent implements OnInit {
             .update({ emitida: true });
         }
       });
+
+    this.fireService.getTable(this.mesa).then((data) => {
+      this.mesaData = data;
+    });
   }
 
   scanListaDeEspera() {
@@ -244,7 +254,49 @@ export class ClienteComponent implements OnInit {
     });
   }
 
+  getPropina() {
+    this.QRService.scan().then((a: any) => {
+      switch (a.text) {
+        case 'Excelente':
+          this.propina = 20;
+          break;
+        case 'Muy bien':
+          this.propina = 15;
+          break;
+        case 'Bien':
+          this.propina = 10;
+          break;
+        case 'Regular':
+          this.propina = 5;
+          break;
+        case 'Malo':
+          this.propina = 0;
+          break;
+      }
+    });
+    
+    if(this.propina > 0)
+    {
+      this.mesaData.pedido.porcentajePropina = `${this.propina}%`
+      this.mesaData.pedido.propina = ((this.mesaData.pedido.total*this.propina) / 100);
+      this.mesaData.pedido.totalConPropina = (this.mesaData.pedido.total + this.mesaData.pedido.propina);
+    }
+    else
+    {
+      this.mesaData.pedido.porcentajePropina = `${this.propina}%`
+      this.mesaData.pedido.propina = this.propina
+      this.mesaData.pedido.totalConPropina = this.mesaData.pedido.total;
+    }
+    
+    this.fireService.updateDoc("mesas", this.mesa, this.mesaData);
+    this.finalizarPropina.emit("pagar");
+  }
+
   pagar() {
+    if(this.propina == null){
+      this.getPropina();
+    }
+
     this.fireService
       .getTable(this.mesaOcupada ?? this.mesaPedido)
       .then((datos: any) => {

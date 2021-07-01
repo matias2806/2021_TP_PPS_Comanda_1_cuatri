@@ -24,6 +24,22 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+// @font-face {
+//     font-family: 'boli';
+//     src: url('./assets/fuentes/Bolina.otf');
+// }
+
+// @font-face {
+//     font-family: 'resto';
+//     src: url('./assets/fuentes/Hot-Restaurant.ttf');
+// }
+
+// @font-face {
+//     font-family: 'cicero';
+//     src: url('./assets/fuentes/CiceroSerif.ttf');
+// }
+
 #backdrop {
     z-index: 9999;
     position: absolute;
@@ -143,3 +159,4 @@
         }
     }
 }
+
