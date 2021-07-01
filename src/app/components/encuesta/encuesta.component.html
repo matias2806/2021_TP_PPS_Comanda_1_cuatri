@@ -1,43 +1,119 @@
 <div class="cnt-encuenta">
-  <div class="cnt-encuenta-form">
-      <form ngNativeValidate (ngSubmit)="this.finalizarEncuesta()">
-          <div class="encuesta-textarea">
-              <p>*Ingrese un breve comentario</p>
-              <textarea name="" id="encuesta-textarea" cols="20" rows="2" required></textarea>
-          </div>
-          <hr>
-          <div class="encuesta-radio">
-              <p>Satisfecho</p>
-              <div>
-                  <label for="">Excelente</label>
-                  <input type="radio" name="group1" checked value="Excelente">
-              </div>
-              <div>
-                  <label for="">Muy bien</label>
-                  <input type="radio" name="group1" value="Muy bien">
-              </div>
-              <div>
-                  <label for="">Bien</label>
-                  <input type="radio" name="group1" value="Bien">
-              </div>
-              <div>
-                <label for="">Regular</label>
-                <input type="radio" name="group1" value="Regular">
+    <div class="cnt-encuenta-form">
+        <form ngNativeValidate (ngSubmit)="this.finalizarEncuesta()">
+            <div class="encuesta-textarea">
+                <p>*Ingrese un comentario</p>
+                <textarea name="" id="encuesta-textarea" cols="20" rows="1" required></textarea>
+            </div>
+            <div class="encuesta-radio">
+                <p>Satisfecho</p>
+                <div>
+                    <div>
+                        <label for="">Excelente</label>
+                        <input type="radio" name="group1" checked value="Excelente">
+                    </div>
+                    <div>
+                        <label for="">Muy bien</label>
+                        <input type="radio" name="group1" value="Muy bien">
+                    </div>
+                </div>
+                <div>
+                    <div class="espacio">
+                        <label for="">Bien</label>
+                        <input type="radio" name="group1" value="Bien">
+                    </div>
+                    <div>
+                        <label for="">Regular</label>
+                        <input type="radio" name="group1" value="Regular">
+                    </div>
+                    <div>
+                        <label for="">Malo</label>
+                        <input type="radio" name="group1" value="Malo">
+                    </div>
+                </div>
             </div>
             <div>
-              <label for="">Malo</label>
-              <input type="radio" name="group1" value="Malo">
-          </div>
-          </div>
-          <div class="uploadPhoto">
-            <button type="button" (click)="this.selectPhotoInPhotolibrary()">Cargar fotos</button>
-            <ul>
-                <p>Maximo 3 fotos</p>
-                <li>
-                    {{this.files.length}}
-                </li>
-            </ul>
-          </div>
-      </form>
-  </div>
+                <p>Conford del establecimiento</p>
+                <input type="range" name="conford">
+            </div>
+            <div>
+                <label>El plato estaba principal rico?&nbsp; <input type="checkbox" name="rico" id="ricoPP"> </label><br>
+                <label>El postre estaba rico?&nbsp;<input type="checkbox" name="rico" id="ricoP"> </label>
+            </div>
+            <div>
+                <select name="select">
+                    <option value="value1" selected>Los recomiendo</option>
+                    <option value="value2">Espero que mejoren</option>
+                    <option value="value3">Mala experiencia</option>
+                  </select>
+            </div>
+            <div class="uploadPhoto">
+                <button type="button" (click)="this.selectPhotoInPhotolibrary()">Cargar fotos</button>
+                <ul>
+                    <p>Maximo 3 fotos</p>
+                    <li>
+                        {{this.files.length}}
+                    </li>
+                </ul>
+            </div>
+            <div class="encuesta-button">
+                <input type="submit">
+                <button type="button" (click)="this.cancelar.emit(undefined)">Cancelar</button>
+            </div>
+        </form>
+    </div>
 </div>
+
+
+<!-- 
+<div class="cnt-encuenta">
+    <div class="cnt-encuenta-form">
+        <form ngNativeValidate (ngSubmit)="this.finalizarEncuesta()">
+            <div class="encuesta-textarea">
+                <p>*Ingrese un comentario</p>
+                <textarea name="" id="encuesta-textarea" cols="20" rows="1" required></textarea>
+            </div>
+            <hr>
+            <div class="encuesta-radio">
+                <p>Satisfecho</p>
+                <div>
+                    <div>
+                        <label for="">Excelente</label>
+                        <input type="radio" name="group1" checked value="Excelente">
+                    </div>
+                    <div>
+                        <label for="">Muy bien</label>
+                        <input type="radio" name="group1" value="Muy bien">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label for="">Bien</label>
+                        <input type="radio" name="group1" value="Bien">
+                    </div>
+                    <div>
+                        <label for="">Regular</label>
+                        <input type="radio" name="group1" value="Regular">
+                    </div>
+                    <div>
+                        <label for="">Malo</label>
+                        <input type="radio" name="group1" value="Malo">
+                    </div>
+                </div>
+            </div>
+            <div class="uploadPhoto">
+                <button type="button" (click)="this.selectPhotoInPhotolibrary()">Cargar fotos</button>
+                <ul>
+                    <p>Maximo 3 fotos</p>
+                    <li>
+                        {{this.files.length}}
+                    </li>
+                </ul>
+            </div>
+            <div class="encuesta-button">
+                <input type="submit">
+                <button type="button" (click)="this.cancelar.emit(undefined)">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div> -->
