@@ -30,11 +30,20 @@
     <div (click)="opt = 'encuesta'" *ngIf="!encuestaTerminada">
       <span>Encuesta</span>
     </div>
+    <div (click)="opt = 'estadistica'">
+      <span>Estadisticas</span>
+    </div>
     <div *ngIf="encuestaTerminada" (click)="pagar()">
       <span>Pedir cuenta</span>
     </div>
   </div>
 </div>
+
+
+<div class="encuesta-satisfaccion" *ngIf="opt == 'estadistica'">
+  <app-estadisticas (volver)="opt = $event" ></app-estadisticas>
+</div>
+
 
 <div class="menu-comidas" *ngIf="estadoCliente == 'enMesa'">
   <app-menu
@@ -136,6 +145,7 @@
     <div class="salir" (click)="irse()"><span>Salir</span></div>
   </div>
 </div>
+
 <div class="estado-pedido" *ngIf="opt == 'estadoPedido'">
   <app-estado-pedido
     [mesaOcupada]="this.mesaOcupada"
