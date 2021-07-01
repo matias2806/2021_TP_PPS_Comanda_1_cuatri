@@ -29,7 +29,9 @@ export class BartenderComponent implements OnInit {
       .doc("bartender")
       .snapshotChanges()
       .subscribe((data: any) => {
+        console.log(data?.payload?.data().emitida);
         if (!data?.payload?.data().emitida) {
+          console.log("here")
           this.activarNotificacion();
           this.db
             .collection("notificaciones")

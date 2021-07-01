@@ -25,11 +25,35 @@
 </head>
 
 <body>
+
   <app-root></app-root>
   <div id="backdrop" hidden>
     <div id="spinner" >
       <img src="assets/img/spinner.gif" alt="Spinner de carga">
     </div> 
+  </div>
+
+  <div id="modal-error-general" class="modal-error-general"> 
+    <div class="modal-error-img-general">
+      <img src="assets/img/banana-podrida.gif" alt="">
+    </div>
+    <div class="modal-error-text-general">
+      <p id="modal-error-text-p-general"></p>
+    </div>    
+  </div>
+
+  <div id="notificacion-push">
+    <div class="ctn-title-push">
+      <div class="icon-push">
+        <img src="assets/img/icon.png" alt="">
+      </div>
+      <div class="title-push">
+        <span id="content-title"></span>
+      </div>
+    </div>
+    <div class="ctn-msj-push">
+      <p id="content-msj"></p>
+    </div>
   </div>
 
   <!-- JavaScript Bundle with Popper -->
