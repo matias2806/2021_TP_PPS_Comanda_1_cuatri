@@ -103,7 +103,7 @@ misma como nuestro gestor de datos.
 ### Sprint 5 - 26/06/2021 al 03/07/2021
 
 ```
-- Revisión general de validaciónes, grabado de videos, push notifications, email de registro(Maxi)
+- Revisión general de validaciónes, grabado de videos, push notifications, email de registro, spinners(Maxi)
 - Revisión general de validaciónes, grabado de videos, QR Propinas, Usuario anonimo, alta cliente(Belen)
 - Revisión general de validaciónes, grabado de videos, Graficos de encuesta, inputs de encuesta (Matias)
 ```
