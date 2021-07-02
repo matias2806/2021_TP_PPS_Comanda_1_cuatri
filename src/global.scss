@@ -24,3 +24,139 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+// @font-face {
+//     font-family: 'boli';
+//     src: url('./assets/fuentes/Bolina.otf');
+// }
+
+// @font-face {
+//     font-family: 'resto';
+//     src: url('./assets/fuentes/Hot-Restaurant.ttf');
+// }
+
+// @font-face {
+//     font-family: 'cicero';
+//     src: url('./assets/fuentes/CiceroSerif.ttf');
+// }
+
+#backdrop {
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color:  rgba(0, 0, 0, 0.76);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#spinner {
+    width: 300px;
+    height: 300px;
+}
+.modal-error-general {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 35%;
+    z-index: 5;
+}
+
+.modal-error-img-general {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: #fcfefc;
+}
+
+.modal-error-img-general img {
+    width: 60%;
+}
+
+.modal-error-text-general {
+    height: 40%;
+    background: #7a0101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 5;
+}
+
+.modal-error-text-general p {
+    font-size: 1.5em;
+    color: white;
+}
+
+
+#notificacion-push {
+    width: 90%;
+    height: 15%;
+    background-color: #F3F4F5;
+    position: absolute;
+    left: 5%;
+    top: -15%;
+    border-radius: 15px;
+    transition: all ease 0.3s;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .ctn-title-push {
+        width: 100%;
+        height: 20%;
+        //background: aliceblue;
+        display: flex;
+        .icon-push {
+            width: 10%;
+            height: 100%;
+            //background: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 80%;
+                height: 100%;
+            }
+        }
+
+        .title-push {
+            width: 90%;
+            height: 100%;
+            //background: blue;
+            font-family: "cicero";
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 5px;
+            color: #666666;
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
+    }
+
+    .ctn-msj-push {
+        width: 100%;
+        height: 65%;
+        //background: aliceblue;
+        font-family: "cicero";
+        color: #333333;
+        font-size: 1.1em;
+        font-weight: bold;
+        padding-top: 5px;
+        p {
+            margin: 0;
+            padding: 0px 10px;
+        }
+    }
+}
+

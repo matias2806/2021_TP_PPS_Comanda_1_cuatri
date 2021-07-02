@@ -29,7 +29,7 @@ export class LoginPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.spinner.activateFor("backdrop", 3000);
+    // this.spinner.activateFor("backdrop", 3000);
     this.getUsers();
   }
 
@@ -98,7 +98,7 @@ export class LoginPage implements OnInit {
         .then((user) => {
           this.pass = "";
           $("#pass").val("");
-          //this.spinner.activateAndRedirect("backdrop", 3000, "home");
+          this.spinner.activateAndRedirect("backdrop", 3000, "home");
           console.log('loguea correctamente')
           this.navegador.navigate(['home']);
         })

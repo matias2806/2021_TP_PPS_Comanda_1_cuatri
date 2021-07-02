@@ -13,12 +13,13 @@ import { ClienteComponent } from '../components/cliente/cliente.component';
 import { SolicitudesComponent } from '../components/solicitudes/solicitudes.component';
 import { ListadoMesasComponent } from '../components/metre/listado-mesas/listado-mesas.component';
 import { MenuComponent } from '../components/menu/menu.component';
-import { HomeMetreComponent  } from '../components/metre/home-metre/home-metre.component'
+import { HomeMetreComponent } from '../components/metre/home-metre/home-metre.component'
 import { HomePageRoutingModule } from './home-routing.module';
-import { ListaEsperaComponent  } from '../components/metre/lista-espera/lista-espera.component'
+import { ListaEsperaComponent } from '../components/metre/lista-espera/lista-espera.component'
 import { BartenderComponent } from '../components/bartender/bartender.component';
 import { CocineroComponent } from '../components/cocinero/cocinero.component';
 import { EncuestaComponent } from '../components/encuesta/encuesta.component';
+import { EstadisticasComponent } from '../components/estadisticas/estadisticas.component';
 import { PedidosPendientesComponent } from '../components/mozo/pedidos-pendientes/pedidos-pendientes.component';
 import { EstadoPedidoComponent } from '../components/estado-pedido/estado-pedido.component';
 import { ClienteDespedidaComponent } from '../components/cliente/cliente-despedida/cliente-despedida.component';
@@ -26,6 +27,15 @@ import { ChangeStatusColorDirective } from '../directives/change-status-color.di
 import { ComidaNuevoPipe } from '../pipes/comida-nuevo.pipe';
 import { BebidaNuevoPipe } from '../pipes/bebida-nuevo.pipe';
 
+import { ChartModule } from 'angular-highcharts';
+import { HIGHCHARTS_MODULES } from 'angular-highcharts';
+import exporting from 'highcharts/modules/exporting.src.js';
+export function highchartModules() {
+  return [exporting]
+}
+import * as Highcharts from 'highcharts';
+import more from 'highcharts/highcharts-more';
+more(Highcharts);
 
 @NgModule({
   imports: [
@@ -33,6 +43,7 @@ import { BebidaNuevoPipe } from '../pipes/bebida-nuevo.pipe';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
+    ChartModule,
   ],
   declarations: [
     HomePage,
@@ -51,11 +62,16 @@ import { BebidaNuevoPipe } from '../pipes/bebida-nuevo.pipe';
     BartenderComponent,
     CocineroComponent,
     EncuestaComponent,
+    EstadisticasComponent,
     PedidosPendientesComponent,
     EstadoPedidoComponent,
     ClienteDespedidaComponent,
     ComidaNuevoPipe,
     BebidaNuevoPipe,
-    ChangeStatusColorDirective]
+    ChangeStatusColorDirective
+  ],
+  providers: [
+    { provide: HIGHCHARTS_MODULES, useFactory: highchartModules }
+  ],
 })
-export class HomePageModule {}
+export class HomePageModule { }

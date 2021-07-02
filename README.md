@@ -37,6 +37,23 @@ misma como nuestro gestor de datos.
 ![](src/assets/README-imagenes/QR/listaDeEsperaReComiendo.png "Pantalla:")
 
 
+### Calificación para propinas QR :question:
+
+#### Propina Excelente
+![](src/assets/README-imagenes/propinasQR/1_-_Excelente_20.png "Pantalla:")
+
+#### Propina Muy Bien
+![](src/assets/README-imagenes/propinasQR/2_-_Muy_bien_15.png "Pantalla:")
+
+#### Propina Bien
+![](src/assets/README-imagenes/propinasQR/3_-_Bien_10.png "Pantalla:")
+
+#### Propina Regular
+![](src/assets/README-imagenes/propinasQR/4_-_Regular_5.png "Pantalla:")
+
+#### Propina Mala
+![](src/assets/README-imagenes/propinasQR/5_-_Malo_0.png "Pantalla:")
+
 # Paso a Paso
 
 
@@ -75,12 +92,20 @@ misma como nuestro gestor de datos.
 ### Sprint 4 - 19/06/2021 al 26/06/2021
 
 ```
-- Componente solicitudes, arreglos generales (Maxi)
-- Componente listadoPedidos, arreglos generales (Belen)
-- Componente menu, arreglos generales (Matias)
+- Componente solicitudes, arreglos generales, grabado de videos (Maxi)
+- Componente listadoPedidos, arreglos generales, grabado de videos (Belen)
+- Componente menu, arreglos generales, grabado de videos (Matias)
 ```
 
 ### Sprint 5 - 26/06/2021 al 03/07/2021
+
+```
+- Revisión general de validaciónes, grabado de videos, push notifications, email de registro(Maxi)
+- Revisión general de validaciónes, grabado de videos, QR Propinas, Usuario anonimo, alta cliente(Belen)
+- Revisión general de validaciónes, grabado de videos, Graficos de encuesta, inputs de encuesta (Matias)
+```
+
+### Sprint 6 - 03/07/2021 al 10/07/2021
 
 ```
 - (Maxi)
