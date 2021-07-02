@@ -33,8 +33,11 @@ misma como nuestro gestor de datos.
 #### Mesa 4
 ![](src/assets/README-imagenes/QR/Mesa_4_ReComiendo.png "Pantalla:")
 
-#### Lista de espera
+
+
+# Lista de espera
 ![](src/assets/README-imagenes/QR/listaDeEsperaReComiendo.png "Pantalla:")
+
 
 
 ### Calificación para propinas QR :question:
