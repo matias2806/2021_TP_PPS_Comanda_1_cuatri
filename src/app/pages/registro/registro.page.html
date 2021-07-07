@@ -5,8 +5,8 @@
     <center><h2>ReComiendo</h2></center>
   </div>
   <div class="botones-registro" *ngIf="!registro">
-    <button type="button" (click)="registro=true">Ingreso Manual</button>
-    <button type="button" (click)="scanDNI()">Escanear DNI</button>
+    <button class="botones-registro-negro" type="button" (click)="registro=true">Ingreso Manual</button>
+    <button class="botones-registro-negro" type="button" (click)="scanDNI()">Escanear DNI</button>
   </div>
   <div class="form" *ngIf="registro">
     <form (ngSubmit)="registrar()">
@@ -26,7 +26,7 @@
         <ion-input type="password" id="passReg" name="clave" placeholder="Contraseña" maxlength="25" minlength="4" clear-input (ionFocus)='focus("passReg")' (ionBlur)='noFocus("passReg")' [(ngModel)]="this.clave"></ion-input>
       </div>
       <div class="form-button">
-        <button type="submit" id="form-button-register">Registrar</button>
+        <button class="botones-registro-negro" type="submit" id="form-button-register">Registrar</button>
       </div>
     </form>  
   </div>
