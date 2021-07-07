@@ -21,18 +21,19 @@
         <div class="food-info">
           <div class="text-food">
             <p>Milanesa</p>
-            <p>Precio: <span>$330</span></p>
+            <p>Precio: <b><span class="precio">$330</span></b></p>
+            <p>Duración: <span class="minutos">40 min</span></p>
           </div>
           <div class="button-food">
             <p>Cantidad: {{listadoPedido.platos.milanesa.cantidad}}</p>
             <div>
-              <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Milanesa', 330, 'platos')"></ion-icon>
               <ion-icon name="remove-circle-outline" (click)="this.removerProducto('Milanesa', 'platos')"></ion-icon>
+              <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Milanesa', 330, 'platos')"></ion-icon>
             </div>
           </div>
         </div>
       </div>
-      <ion-icon class="open-icon" name="arrow-up-circle" (click)="desplegarMenu('info-slide-1')"></ion-icon>
+      <ion-icon class="open-icon grande" name="arrow-up-circle" (click)="desplegarMenu('info-slide-1')"></ion-icon>
     </ion-slides>
 
     <!--------------------------Hamburguesa------------------------------->
@@ -51,19 +52,20 @@
         <div class="food-info">
           <div class="text-food">
             <p>Hamburguesa</p>
-            <p>Precio: <span>$280</span></p>
+            <p>Precio: <b><span class="precio">$280</span></b></p>
+            <p>Duración: <span class="minutos">60 min</span></p>
           </div>
           <div class="button-food">
             <p>Cantidad: {{listadoPedido.platos.hamburguesa.cantidad}}</p>
             <div>
+              <ion-icon name="remove-circle-outline" (click)="this.removerProducto('Hamburguesa', 'platos')"></ion-icon>
               <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Hamburguesa', 280, 'platos')">
               </ion-icon>
-              <ion-icon name="remove-circle-outline" (click)="this.removerProducto('Hamburguesa', 'platos')"></ion-icon>
             </div>
           </div>
         </div>
       </div>
-      <ion-icon class="open-icon" name="arrow-up-circle" (click)="desplegarMenu('info-slide-2')"></ion-icon>
+      <ion-icon class="open-icon grande" name="arrow-up-circle" (click)="desplegarMenu('info-slide-2')"></ion-icon>
     </ion-slides>
 
     <!--------------------------Muzzarelitas------------------------------->
@@ -82,20 +84,21 @@
         <div class="food-info">
           <div class="text-food">
             <p>Muzzarelitas</p>
-            <p>Precio: <span>$190</span></p>
+            <p>Precio: <b><span class="precio">$190</span></b></p>
+            <p>Duración: <span class="minutos">40 min</span></p>
           </div>
           <div class="button-food">
             <p>Cantidad: {{listadoPedido.platos.muzzarelitas.cantidad}}</p>
             <div>
-              <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Muzzarelitas', 190, 'platos')">
-              </ion-icon>
               <ion-icon name="remove-circle-outline" (click)="this.removerProducto('Muzzarelitas', 'platos')">
+              </ion-icon>
+              <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Muzzarelitas', 190, 'platos')">
               </ion-icon>
             </div>
           </div>
         </div>
       </div>
-      <ion-icon class="open-icon" name="arrow-up-circle" (click)="desplegarMenu('info-slide-3')"></ion-icon>
+      <ion-icon class="open-icon grande" name="arrow-up-circle" (click)="desplegarMenu('info-slide-3')"></ion-icon>
     </ion-slides>
 
     <!--------------------------Fideos------------------------------->
@@ -115,18 +118,19 @@
         <div class="food-info">
           <div class="text-food">
             <p>Fideos</p>
-            <p>Precio: <span>$230</span></p>
+            <p>Precio: <b><span class="precio">$230</span></b></p>
+            <p>Duración: <span class="minutos">15 min</span></p>
           </div>
           <div class="button-food">
             <p>Cantidad: {{listadoPedido.platos.fideos.cantidad}}</p>
             <div>
-              <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Fideos', 230, 'platos')"></ion-icon>
               <ion-icon name="remove-circle-outline" (click)="this.removerProducto('Fideos', 'platos')"></ion-icon>
+              <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Fideos', 230, 'platos')"></ion-icon>
             </div>
           </div>
         </div>
       </div>
-      <ion-icon class="open-icon" name="arrow-up-circle" (click)="desplegarMenu('info-slide-4')"></ion-icon>
+      <ion-icon class="open-icon grande" name="arrow-up-circle" (click)="desplegarMenu('info-slide-4')"></ion-icon>
     </ion-slides>
   </div>
   <div class="menu" *ngIf="menu == 'bebidas'">
@@ -146,18 +150,19 @@
         <div class="food-info">
           <div class="text-food">
             <p>Agua</p>
-            <p>Precio: <span>$80</span></p>
+            <p>Precio: <b><span class="precio">$80</span></b></p>
+            <p>Duración: <span class="minutos">8 min</span></p>
           </div>
           <div class="button-food">
             <p>Cantidad: {{listadoPedido.bebidas.agua.cantidad}}</p>
             <div>
-              <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Agua', 80, 'bebidas')"></ion-icon>
               <ion-icon name="remove-circle-outline" (click)="this.removerProducto('Agua', 'bebidas')"></ion-icon>
+              <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Agua', 80, 'bebidas')"></ion-icon>
             </div>
           </div>
         </div>
       </div>
-      <ion-icon class="open-icon" name="arrow-up-circle" (click)="desplegarMenu('info-slide-5')"></ion-icon>
+      <ion-icon class="open-icon grande" name="arrow-up-circle" (click)="desplegarMenu('info-slide-5')"></ion-icon>
     </ion-slides>
 
     <!--------------------------Gaseosa------------------------------->
@@ -176,18 +181,19 @@
         <div class="food-info">
           <div class="text-food">
             <p>Gaseosa</p>
-            <p>Precio: <span>$100</span></p>
+            <p>Precio: <b><span class="precio">$100</span></b></p>
+            <p>Duración: <span class="minutos">6 min</span></p>
           </div>
           <div class="button-food">
             <p>Cantidad: {{listadoPedido.bebidas.gaseosa.cantidad}}</p>
             <div>
-              <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Gaseosa', 280, 'bebidas')"></ion-icon>
               <ion-icon name="remove-circle-outline" (click)="this.removerProducto('Gaseosa', 'bebidas')"></ion-icon>
+              <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Gaseosa', 280, 'bebidas')"></ion-icon>
             </div>
           </div>
         </div>
       </div>
-      <ion-icon class="open-icon" name="arrow-up-circle" (click)="desplegarMenu('info-slide-6')"></ion-icon>
+      <ion-icon class="open-icon grande" name="arrow-up-circle" (click)="desplegarMenu('info-slide-6')"></ion-icon>
     </ion-slides>
 
     <!--------------------------Cerveza------------------------------->
@@ -206,18 +212,19 @@
         <div class="food-info">
           <div class="text-food">
             <p>Cerveza</p>
-            <p>Precio: <span>$60</span></p>
+            <p>Precio: <b><span class="precio">$60</span></b></p>
+            <p>Duración: <span class="minutos">5 min</span></p>
           </div>
           <div class="button-food">
             <p>Cantidad: {{listadoPedido.bebidas.cerveza.cantidad}}</p>
             <div>
+              <ion-icon name="remove-circle-outline" (clicxk)="this.removerProducto('Cerveza', 'bebidas')"></ion-icon>
               <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Cerveza', 60, 'bebidas')"></ion-icon>
-              <ion-icon name="remove-circle-outline" (click)="this.removerProducto('Cerveza', 'bebidas')"></ion-icon>
             </div>
           </div>
         </div>
       </div>
-      <ion-icon class="open-icon" name="arrow-up-circle" (click)="desplegarMenu('info-slide-7')"></ion-icon>
+      <ion-icon class="open-icon grande" name="arrow-up-circle" (click)="desplegarMenu('info-slide-7')"></ion-icon>
     </ion-slides>
   </div>
   <div class="menu" *ngIf="menu == 'postres'">
@@ -237,19 +244,20 @@
         <div class="food-info">
           <div class="text-food">
             <p>Chocotorta</p>
-            <p>Precio: <span>$70</span></p>
+            <p>Precio: <b><span class="precio">$70</span></b></p>
+            <p>Duración: <span class="minutos">15 min</span></p>
           </div>
           <div class="button-food">
             <p>Cantidad: {{listadoPedido.postres.chocotorta.cantidad}}</p>
             <div>
+              <ion-icon name="remove-circle-outline" (click)="this.removerProducto('Chocotorta', 'postres')"></ion-icon>
               <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Chocotorta', 70, 'postres')">
               </ion-icon>
-              <ion-icon name="remove-circle-outline" (click)="this.removerProducto('Chocotorta', 'postres')"></ion-icon>
             </div>
           </div>
         </div>
       </div>
-      <ion-icon class="open-icon" name="arrow-up-circle" (click)="desplegarMenu('info-slide-8')"></ion-icon>
+      <ion-icon class="open-icon grande" name="arrow-up-circle" (click)="desplegarMenu('info-slide-8')"></ion-icon>
     </ion-slides>
     <!--------------------------Flan------------------------------->
     <ion-slides>
@@ -267,18 +275,19 @@
         <div class="food-info">
           <div class="text-food">
             <p>Flan</p>
-            <p>Precio: <span>$50</span></p>
+            <p>Precio: <b><span class="precio">$50</span></b></p>
+            <p>Duración: <span class="minutos">10 min</span></p>
           </div>
           <div class="button-food">
             <p>Cantidad: {{listadoPedido.postres.flan.cantidad}}</p>
             <div>
-              <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Flan', 50, 'postres')"></ion-icon>
               <ion-icon name="remove-circle-outline" (click)="this.removerProducto('Flan', 'postres')"></ion-icon>
+              <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Flan', 50, 'postres')"></ion-icon>
             </div>
           </div>
         </div>
       </div>
-      <ion-icon class="open-icon" name="arrow-up-circle" (click)="desplegarMenu('info-slide-9')"></ion-icon>
+      <ion-icon class="open-icon grande" name="arrow-up-circle" (click)="desplegarMenu('info-slide-9')"></ion-icon>
     </ion-slides>
     <!--------------------------Helado------------------------------->
     <ion-slides>
@@ -296,20 +305,22 @@
         <div class="food-info">
           <div class="text-food">
             <p>Helado</p>
-            <p>Precio: <span>$80</span></p>
+            <p>Precio: <b><span class="precio">$80</span></b></p>
+            <p>Duración: <span class="minutos">5 min</span></p>
           </div>
           <div class="button-food">
             <p>Cantidad: {{listadoPedido.postres.helado.cantidad}}</p>
             <div>
-              <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Helado', 80, 'postres')"></ion-icon>
               <ion-icon name="remove-circle-outline" (click)="this.removerProducto('Helado', 'postres')"></ion-icon>
+              <ion-icon name="add-circle-outline" (click)="this.agregarProducto('Helado', 80, 'postres')"></ion-icon>
             </div>
           </div>
         </div>
       </div>
-      <ion-icon class="open-icon" name="arrow-up-circle" (click)="desplegarMenu('info-slide-10')"></ion-icon>
+      <ion-icon class="open-icon grande" name="arrow-up-circle" (click)="desplegarMenu('info-slide-10')"></ion-icon>
     </ion-slides>
   </div>
+
   <div class="footer-menu">
     <div class="queries-menu" (click)="abrirConsulta = true">
       <span>
@@ -318,10 +329,12 @@
     </div>
     <div class="amount-order-menu">
       <div><span class="amount">${{totalAmount}}</span></div>
-      <div class="order" (click)="orderConfirmation = true" *ngIf="totalAmount > 0"><span>Pedir</span></div>
+      <div class="order" (click)="orderConfirmation = true" *ngIf="totalAmount > 0"><span> Pedir
+        </span></div>
     </div>
   </div>
 </div>
+
 <div class="order-confirmation-menu" *ngIf="orderConfirmation">
   <div class="content-order-confirmation">
     <p class="tittle-order-confirmation ">¿Está seguro que desea finalizar el pedido?</p>
@@ -369,7 +382,9 @@
         </li>
       </ul>
     </div>
+    <hr><br>
     <p class="food-total-amount">Total: ${{totalAmount}}.-</p>
+    <p class="food-total-amount">Tiempo: 40 min.-</p>
     <div class="confirmation-buttons-menu">
       <div class="button-menu confirm" (click)="agregarPedido()">
         <p>Confirmar</p>
@@ -380,6 +395,7 @@
     </div>
   </div>
 </div>
+
 <div class="order-confirmation-menu" *ngIf="abrirConsulta">
   <div class="content-order-confirmation">
     <div class="food query">

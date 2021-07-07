@@ -17,7 +17,9 @@ export class EstadisticasComponent implements OnInit {
   @Output() volver: EventEmitter<any> = new EventEmitter<any>();
 
   chart: Chart = new Chart;
+  chart2: Chart = new Chart;
   public listadoEncuestas;
+  public estadisticas: boolean = true;
 
   public satisfaccion: any[] = [{
     name: 'Excelente',
@@ -44,7 +46,7 @@ export class EstadisticasComponent implements OnInit {
     type: undefined,
     data: []
   },
-];
+  ];
 
   constructor(private fireService: FirebaseService,) { }
 
@@ -53,6 +55,58 @@ export class EstadisticasComponent implements OnInit {
       this.listadoEncuestas = datos;
       this.armarchart3();
     });
+
+    this.armarchart2();
+  }
+
+  armarchart2() {
+    var info = this.armaData2();
+    // console.log(info);
+
+    this.chart2 = new Chart({
+      chart: {
+        renderTo: 'container',
+        type: 'pie'
+      },
+      title: {
+        text: 'Experiencias. '
+      },
+      series: [{
+        type: 'pie',
+        name: 'graf',
+        data: info
+      }]
+    });
+  }
+
+  armaData2() {
+    var b: any[] = [];
+
+
+    b.push({ name: "Los recomiendo", y: 12 })
+    b.push({ name: "Espero que mejoren", y: 5 })
+    b.push({ name: "Mala experiencia", y: 2 })
+
+    // var arrayEspe: string[] = [];
+    // this.listadoEspecialidad.forEach(esp => {
+    //   arrayEspe.push(esp.nombre);
+    // });
+
+    // arrayEspe.forEach(nombreEsp => {
+    //   var info: any;
+    //   info = {
+    //     name: nombreEsp,
+    //     y: 0,
+    //   }
+    //   this.listadoTurnos.forEach(turno => {
+    //     if (turno.especialidad!.nombre == nombreEsp) {
+    //       info.y++;
+    //     }
+    //   });
+    //   b.push(info);
+
+    // });
+    return b;
   }
 
   armarchart3() {
@@ -80,15 +134,15 @@ export class EstadisticasComponent implements OnInit {
   }
 
   preparaSerie() {
-    var contador=0;
-    this.satisfaccion.forEach(e => {      
+    var contador = 0;
+    this.satisfaccion.forEach(e => {
       this.listadoEncuestas.forEach(encuesta => {
-        if(encuesta.encuesta.satisfecho == e.name){
+        if (encuesta.encuesta.satisfecho == e.name) {
           contador++;
         }
       });
       e.data.push(contador);
-      contador=0;
+      contador = 0;
     });
   }
 
@@ -96,5 +150,9 @@ export class EstadisticasComponent implements OnInit {
 
   salir() {
     this.volver.emit(undefined);
+  }
+
+  siguiente() {
+    this.estadisticas = !this.estadisticas;
   }
 }
