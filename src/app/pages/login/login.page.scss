@@ -57,6 +57,9 @@ h1
     transition: 0.5s;
     text-transform: uppercase;
     letter-spacing: 2px;
+    color:black;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 form
@@ -104,6 +107,9 @@ form
     width: 100%;
     height: 14%;
     display: block;
+    color:black;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #nombreInvitado {
@@ -145,6 +151,12 @@ form
 
 .texto-registro {
     margin-top: 3vh;
+}
+
+.botones-registro-negro{
+    color: black !important;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .mensaje
