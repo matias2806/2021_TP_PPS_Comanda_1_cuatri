@@ -63,7 +63,10 @@ export class ListadoMesasComponent implements OnInit {
       this.fireService.updateDoc(
         "listaEspera",
         this.clienteSeleccionado.correo,
-        { asignado: true }
+        { 
+          asignado: true,
+          mesaAsignada: mesa.nombre
+        }
       );
       this.volver.emit("listaEsperaListadoMesas");
     }
