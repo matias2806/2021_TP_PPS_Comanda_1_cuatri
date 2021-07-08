@@ -111,7 +111,8 @@ misma como nuestro gestor de datos.
 ### Sprint 6 - 03/07/2021 al 10/07/2021
 
 ```
-- (Maxi)
-- (Belen)
-- (Matias)
+A partir de este SPRINT comenzamos a trabajar unicamente en las correcciones de los profesores y ayudantes
+- Validación no permitir asignar mesas ya asignadas, revisión de acentos(Maxi)
+- Grafico de torta, Estilos global de la app (Se ajusta a pedido del profesor)(Belen)
+- Tiempo a las comidas, Se agrando la fuente en los importes del MENU(Matias)
 ```
