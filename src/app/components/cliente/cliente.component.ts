@@ -190,7 +190,21 @@ export class ClienteComponent implements OnInit {
                 data.ocupada = true;
                 data.asignacion = "true";
                 data.cliente = this.dataCurrentUser;
-                switch (a.text) {
+                if (datos.mesaAsignada === a.text) {
+                  this.fireService.updateDoc("mesas", a.text, data);
+                  this.estadoCliente = "enMesa";
+                  this.mesaOcupada = datos.mesaAsignada;
+                }
+                else{
+                  this.utilidadService.textoMostrar(
+                    "#modal-error-text-p-general",
+                    "La mesa no es la asignada",
+                    "#modal-error-general",
+                    "#container-client"
+                  );
+                  this.vibrationService.error();
+                }
+                /*switch (a.text) {
                   case "Mesa 1 ReComiendo":
                     this.fireService.updateDoc("mesas", a.text, data);
                     this.estadoCliente = "enMesa";
@@ -224,7 +238,7 @@ export class ClienteComponent implements OnInit {
                       "#container-client"
                     );
                     this.vibrationService.error();
-                }
+                }*/
               } else {
                 console.error("mesa ocupada");
                 this.utilidadService.textoMostrar(
