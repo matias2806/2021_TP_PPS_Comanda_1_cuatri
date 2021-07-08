@@ -193,7 +193,7 @@ export class ClienteComponent implements OnInit {
                 if (datos.mesaAsignada === a.text) {
                   this.fireService.updateDoc("mesas", a.text, data);
                   this.estadoCliente = "enMesa";
-                  this.mesaOcupada = data.mesaAsignada;
+                  this.mesaOcupada = datos.mesaAsignada;
                 }
                 else{
                   this.utilidadService.textoMostrar(
