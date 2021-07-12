@@ -26,7 +26,7 @@ export class ClienteComponent implements OnInit {
   encuestaTerminada: boolean = false;
   clienteEnMesa: boolean = false;
   clienteEsperandoPedido: boolean = false;
-  propina: number = null;
+  // okMesa: boolean = false
 
   constructor(
     private QRService: QRScannerService,
@@ -272,49 +272,26 @@ export class ClienteComponent implements OnInit {
     });
   }
 
-  getPropina() {
-    this.QRService.scan().then((a: any) => {
-      switch (a.text) {
-        case 'Excelente':
-          this.propina = 20;
-          break;
-        case 'Muy bien':
-          this.propina = 15;
-          break;
-        case 'Bien':
-          this.propina = 10;
-          break;
-        case 'Regular':
-          this.propina = 5;
-          break;
-        case 'Malo':
-          this.propina = 0;
-          break;
-      }
-    });
-    
-    if(this.propina > 0)
-    {
-      this.mesaData.pedido.porcentajePropina = `${this.propina}%`
-      this.mesaData.pedido.propina = ((this.mesaData.pedido.total*this.propina) / 100);
-      this.mesaData.pedido.totalConPropina = (this.mesaData.pedido.total + this.mesaData.pedido.propina);
-    }
-    else
-    {
-      this.mesaData.pedido.porcentajePropina = `${this.propina}%`
-      this.mesaData.pedido.propina = this.propina
-      this.mesaData.pedido.totalConPropina = this.mesaData.pedido.total;
-    }
-    
-    this.fireService.updateDoc("mesas", this.mesa, this.mesaData);
-    this.finalizarPropina.emit("pagar");
-  }
+  // scanMesaGeneral() {
+  //  this.QRService.scan().then((a: any) => {
+  //    switch (a.text) {
+  //      case 'Mesa 1 ReComiendo':
+  //        this.okMesa = true;
+  //        break;
+  //      case 'Mesa 2 ReComiendo':
+  //       this.okMesa = true;
+  //        break;
+  //      case 'Mesa 3 ReComiendo':
+  //       this.okMesa = true;
+  //        break;
+  //      case 'Mesa 4 ReComiendo':
+  //       this.okMesa = true;
+  //        break;
+  //    }
+  //  });
+  // }
 
   pagar() {
-    if(this.propina == null){
-      this.getPropina();
-    }
-
     this.fireService
       .getTable(this.mesaOcupada ?? this.mesaPedido)
       .then((datos: any) => {
