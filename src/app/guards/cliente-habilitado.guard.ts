@@ -26,7 +26,7 @@ export class ClienteHabilitadoGuard implements CanActivate {
             if(datos.habilitado == 'aceptado')
               return true;
             else{
-              this.utilidad.textoMostrar("#mensajeTexto", "Usted no se encuentra autorizado, contactese con el mozo", "#mensajeLogin", "");
+              this.utilidad.textoMostrar("#mensajeTexto", "Su cuenta todavía no fue aprobada", "#mensajeLogin", "");
               this.vibrationService.error();
               return false;
             }
