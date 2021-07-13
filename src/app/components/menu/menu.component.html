@@ -400,8 +400,11 @@
   <div class="content-order-confirmation">
     <div class="food query">
       <p class="tittle-order-confirmation ">Ingrese su consulta al mozo:</p>
-      <textarea name="consulta" cols="45" rows="8" [(ngModel)]="consulta"></textarea>
+      <textarea name="consulta" cols="45" rows="4" [(ngModel)]="consulta"></textarea>
+      <br>
+      <p>respuesta: {{respuesta}}</p>
     </div>
+    
     <div class="confirmation-buttons-menu">
       <div class="button-menu confirm" (click)="enviarConsulta()">
         <p>Enviar</p>

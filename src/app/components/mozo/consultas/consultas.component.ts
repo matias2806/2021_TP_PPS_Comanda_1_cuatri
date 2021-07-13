@@ -11,6 +11,7 @@ export class ConsultasComponent implements OnInit {
   mesas: any;
   consultaConfirmation: boolean = false;
   consultaMesa: any;
+  respuestaConsulta: any;
 
   constructor(private fireService: FirebaseService) {}
 
@@ -33,11 +34,13 @@ export class ConsultasComponent implements OnInit {
 
   cerrarConsulta() {
     this.consultaMesa.consulta = "";
+    this.consultaMesa.respuesta = this.respuestaConsulta;
     this.fireService.updateDoc(
       "mesas",
       `Mesa ${this.consultaMesa.numero} ReComiendo`,
       this.consultaMesa
     );
+    this.fireService.sendNotification("", "clienteRespuesta");
     this.actualizarLista();
   }
 
