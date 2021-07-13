@@ -26,7 +26,6 @@ export class ClienteComponent implements OnInit {
   encuestaTerminada: boolean = false;
   clienteEnMesa: boolean = false;
   clienteEsperandoPedido: boolean = false;
-  // okMesa: boolean = false
 
   constructor(
     private QRService: QRScannerService,
@@ -271,25 +270,6 @@ export class ClienteComponent implements OnInit {
       }
     });
   }
-
-  // scanMesaGeneral() {
-  //  this.QRService.scan().then((a: any) => {
-  //    switch (a.text) {
-  //      case 'Mesa 1 ReComiendo':
-  //        this.okMesa = true;
-  //        break;
-  //      case 'Mesa 2 ReComiendo':
-  //       this.okMesa = true;
-  //        break;
-  //      case 'Mesa 3 ReComiendo':
-  //       this.okMesa = true;
-  //        break;
-  //      case 'Mesa 4 ReComiendo':
-  //       this.okMesa = true;
-  //        break;
-  //    }
-  //  });
-  // }
 
   pagar() {
     this.fireService
