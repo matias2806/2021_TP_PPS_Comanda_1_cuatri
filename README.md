@@ -116,3 +116,12 @@ A partir de este SPRINT comenzamos a trabajar unicamente en las correcciones de 
 - Grafico de torta, Estilos global de la app (Se ajusta a pedido del profesor)(Belen)
 - Tiempo a las comidas, Se agrando la fuente en los importes del MENU(Matias)
 ```
+
+### Sprint 7 - 10/07/2021 al 13/07/2021
+
+```
+Continuamos con correcciones pendientes
+- Chat del mozo y push notification de respuesta que hay una pregunta al mozo(Maxi)
+- Cambios de mensajes, Fix de QR, propinas (Belen)
+- toast de creación de usuario exitoso y spinner agregado cuando carga la información de las estadisticas(Matias)
+```

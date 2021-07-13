@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FirebaseService } from 'src/app/servicios/firebase.service';
 import { UtilidadService } from 'src/app/servicios/utilidad.service';
+import { QRScannerService } from "src/app/servicios/qrscanner.service";
 
 @Component({
   selector: 'app-encuesta',
@@ -9,7 +10,7 @@ import { UtilidadService } from 'src/app/servicios/utilidad.service';
 })
 export class EncuestaComponent implements OnInit {
   
-  constructor(private fire : FirebaseService, private utilidad : UtilidadService) { }
+  constructor(private fire : FirebaseService, private utilidad : UtilidadService, private QRService: QRScannerService,) { }
 
   cometario:string;
   @Input() mesa:string;
@@ -48,26 +49,33 @@ export class EncuestaComponent implements OnInit {
     return (<HTMLInputElement>document.querySelector('#encuesta-textarea')).value;
   }
 
-  finalizarEncuesta()
-  {
-    switch(this.getRadio())
-    {
-      case 'Excelente':
-        this.propina = 20;
-        break;
-      case 'Muy bien':
-        this.propina = 15;
-        break;
-      case 'Bien':
-        this.propina = 10;
-        break;
-      case 'Regular':
-        this.propina = 5;
-        break;
-      case 'Malo':
-        this.propina = 0;
-        break;
-    }
+  getPropina(){
+    this.QRService.scan().then((a: any) => {
+      switch (a.text) {
+        case 'Excelente':
+          this.propina = 20;
+          break;
+        case 'Muy bien':
+          this.propina = 15;
+          break;
+        case 'Bien':
+          this.propina = 10;
+          break;
+        case 'Regular':
+          this.propina = 5;
+          break;
+        case 'Malo':
+          this.propina = 0;
+          break;
+      }
+    });
+  }
+
+  finalizarEncuesta(){
+
+  if(this.propina == null){
+      this.getPropina();
+  }
 
     if(this.propina > 0)
     {

@@ -1,7 +1,7 @@
 <div class="container-client" *ngIf="!(estadoCliente == 'enMesa' || opt)">
   <p *ngIf="!estadoCliente" id="container-client-p">¡Anotate en la lista!</p>
   <p *ngIf="estadoCliente == 'listaEspera'" id="container-client-p">
-    Mesa asignada
+    Mesa pendiente de asignar
   </p>
   <p *ngIf="estadoCliente == 'encuesta'" id="container-client-p">
     Continúe con su pedido

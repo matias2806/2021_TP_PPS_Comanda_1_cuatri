@@ -255,6 +255,28 @@ export class FirebaseService {
     });
   }
 
+  getResponse(){
+    return new Promise((resolve, reject) => {
+      this.db
+        .collection("mesas", (ref) => {
+          return ref.where("respuesta", ">", "");
+        }
+          )
+        .snapshotChanges()
+        .subscribe(
+          (pedidos: any) => {
+            if (!pedidos) {
+              resolve([])
+            }
+            else
+            {
+              resolve(pedidos)
+            }
+          }, (error) => reject(error)
+        )
+    });
+  }
+
   getClientInTable(email) {
     return new Promise((resolve, reject) => {
       this.db

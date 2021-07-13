@@ -63,7 +63,7 @@ export class EstadoPedidoComponent implements OnInit {
     } else {
       this.utilidadService.textoMostrar(
         "#modal-error-text-p-general",
-        "El mozo aón no entregó el pedido",
+        "El mozo aún no entregó el pedido",
         "#modal-error-general",
         ".container-home"
       );
