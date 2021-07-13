@@ -4,6 +4,7 @@ import { Chart } from 'angular-highcharts';
 import more from 'highcharts/highcharts-more';
 more(Highcharts);
 import * as Highcharts from 'highcharts';
+import { SpinnerService } from 'src/app/servicios/spinner.service';
 
 @Component({
   selector: 'app-estadisticas',
@@ -48,7 +49,9 @@ export class EstadisticasComponent implements OnInit {
   },
   ];
 
-  constructor(private fireService: FirebaseService,) { }
+  constructor(private fireService: FirebaseService, private spinnerService: SpinnerService) {
+    spinnerService.activateFor('backdrop', 2000);
+  }
 
   ngOnInit() {
     this.fireService.getDB("encuestas").then((datos) => {
@@ -153,6 +156,7 @@ export class EstadisticasComponent implements OnInit {
   }
 
   siguiente() {
+    this.spinnerService.activateFor('backdrop', 2000);
     this.estadisticas = !this.estadisticas;
   }
 }

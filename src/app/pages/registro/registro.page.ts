@@ -10,6 +10,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { VibrationService } from 'src/app/servicios/vibration.service';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { ToastController } from "@ionic/angular";
 
 @Component({
   selector: 'app-registro',
@@ -30,7 +31,7 @@ export class RegistroPage implements OnInit {
   perfiles:string[] = ["Cocinero","Mozo","Dueño","Supervisor","Bartender", "Metre"];
   perfilSeleccionado:string = "cliente";
   
-  constructor(private servicio : FirebaseService, private vibrationService:VibrationService,private s_utilidad : UtilidadService, private spinner : SpinnerService, private platform:Platform, private QRService:QRScannerService, private location : Location, private router : ActivatedRoute ) {
+  constructor(private servicio : FirebaseService, private vibrationService:VibrationService,private s_utilidad : UtilidadService, private spinner : SpinnerService, private platform:Platform, private QRService:QRScannerService, private location : Location, private router : ActivatedRoute,private toastService: ToastController ) {
     /* this.platform.backButton.subscribeWithPriority(0, () => { //cuando apreto el boton volver de la pantalla de android, dejo de intentar scanear el codigo
       document.getElementsByTagName("body")[0].style.opacity = "1";
       QRService.destroy();
@@ -55,7 +56,7 @@ export class RegistroPage implements OnInit {
     if(this.validarTipoEmpleado() && this.validarNombreApellido() && this.validarDni() && this.validarCorreo() &&  this.validarClave() && this.validarCuil() )
     {
       this.servicio.registerEmail(this.correo, this.clave).then((a) => {
-
+        this.toastSuccess("Usuario registrado");
         if(this.file != null){
           this.servicio.uploadPhoto(this.file, `${this.perfilSeleccionado.toLowerCase()}/${this.correo}`).then((datos) => {
             this.url = <string>datos;
@@ -82,6 +83,15 @@ export class RegistroPage implements OnInit {
     else{
       this.vibrationService.error()
     }
+  }
+
+  async toastSuccess(mensaje: string) {
+    const toast = await this.toastService.create({
+      duration: 4000,
+      message: mensaje,
+      color: 'success'
+    });
+    toast.present();
   }
 
   validarCorreo() : boolean
