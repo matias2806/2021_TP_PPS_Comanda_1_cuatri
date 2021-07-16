@@ -24,16 +24,16 @@
     <img src="../../../assets/img/qr.png" alt="" />
   </div>
   <div class="opcionesCliente" *ngIf="this.estadoCliente == 'opts'">
-    <div (click)="opt = 'estadoPedido'" *ngIf="!encuestaTerminada">
+    <div (click)="opt = 'estadoPedido'" >
       <span>Estado del pedido</span>
     </div>
-    <div (click)="opt = 'encuesta'" *ngIf="!encuestaTerminada">
+    <div (click)="opt = 'encuesta'" >
       <span>Encuesta</span>
     </div>
     <div (click)="opt = 'estadistica'">
       <span>Estadísticas</span>
     </div>
-    <div *ngIf="encuestaTerminada" (click)="pagar()">
+    <div  (click)="pagar()">
       <span>Pedir cuenta</span>
     </div>
   </div>
