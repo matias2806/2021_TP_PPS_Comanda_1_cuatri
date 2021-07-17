@@ -49,33 +49,7 @@ export class EncuestaComponent implements OnInit {
     return (<HTMLInputElement>document.querySelector('#encuesta-textarea')).value;
   }
 
-  getPropina(){
-    this.QRService.scan().then((a: any) => {
-      switch (a.text) {
-        case 'Excelente':
-          this.propina = 20;
-          break;
-        case 'Muy bien':
-          this.propina = 15;
-          break;
-        case 'Bien':
-          this.propina = 10;
-          break;
-        case 'Regular':
-          this.propina = 5;
-          break;
-        case 'Malo':
-          this.propina = 0;
-          break;
-      }
-    });
-  }
-
   finalizarEncuesta(){
-
-  if(this.propina == null){
-      this.getPropina();
-  }
 
     if(this.propina > 0)
     {
