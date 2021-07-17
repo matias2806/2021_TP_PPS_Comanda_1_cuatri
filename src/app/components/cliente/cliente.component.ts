@@ -203,41 +203,6 @@ export class ClienteComponent implements OnInit {
                   );
                   this.vibrationService.error();
                 }
-                /*switch (a.text) {
-                  case "Mesa 1 ReComiendo":
-                    this.fireService.updateDoc("mesas", a.text, data);
-                    this.estadoCliente = "enMesa";
-                    this.mesaOcupada = "Mesa 1 ReComiendo";
-                    break;
-
-                  case "Mesa 2 ReComiendo":
-                    this.fireService.updateDoc("mesas", a.text, data);
-                    this.estadoCliente = "enMesa";
-                    this.mesaOcupada = "Mesa 2 ReComiendo";
-                    break;
-
-                  case "Mesa 3 ReComiendo":
-                    this.fireService.updateDoc("mesas", a.text, data);
-                    this.estadoCliente = "enMesa";
-                    this.mesaOcupada = "Mesa 3 ReComiendo";
-                    break;
-
-                  case "Mesa 4 ReComiendo":
-                    this.fireService.updateDoc("mesas", a.text, data);
-                    this.estadoCliente = "enMesa";
-                    this.mesaOcupada = "Mesa 4 ReComiendo";
-                    break;
-
-                  default:
-                    console.error("el qr no es el correcto");
-                    this.utilidadService.textoMostrar(
-                      "#modal-error-text-p-general",
-                      "El QR no es el correcto",
-                      "#modal-error-general",
-                      "#container-client"
-                    );
-                    this.vibrationService.error();
-                }*/
               } else {
                 console.error("mesa ocupada");
                 this.utilidadService.textoMostrar(
@@ -306,7 +271,7 @@ export class ClienteComponent implements OnInit {
 
   finalizar($event) {
     console.log($event);
-    this.encuestaTerminada = true;
+    //this.encuestaTerminada = true;
     this.estadoCliente = "opts";
     this.opt = "";
   }
