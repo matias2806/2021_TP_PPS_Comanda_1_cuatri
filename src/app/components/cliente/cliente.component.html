@@ -8,14 +8,23 @@
   </p>
   <div class="btn-scan" (click)="scanListaDeEspera()" *ngIf="!estadoCliente">
     <img src="../../../assets/img/qr.png" alt="" />
+    
   </div>
   <div
     class="btn-scan"
     (click)="scanMesa()"
-    *ngIf="estadoCliente == 'listaEspera'"
   >
     <img src="../../../assets/img/qr.png" alt="" />
+    <br>
+    
   </div>
+  <br>
+  <div *ngIf="estadoCliente == 'listaEspera'">
+    <div (click)="opt = 'estadistica'" class="btn-estadistica">
+      <span>Estadísticas</span>
+    </div>
+  </div>
+  
   <div
     class="btn-scan"
     (click)="scanMesa()"
@@ -40,7 +49,7 @@
 </div>
 
 
-<div class="encuesta-satisfaccion" *ngIf="opt == 'estadistica'">
+<div class="encuesta-satisfaccion" *ngIf="opt == 'estadistica' ">
   <app-estadisticas (volver)="opt = $event" ></app-estadisticas>
 </div>
 
