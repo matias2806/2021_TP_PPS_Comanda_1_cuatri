@@ -55,7 +55,7 @@ export class EncuestaComponent implements OnInit {
     //{
       this.mesaData.pedido.porcentajePropina = `15%`
       this.mesaData.pedido.propina = ((this.mesaData.pedido.total*15) / 100);
-      this.mesaData.pedido.totalConPropina = this.mesaData.pedido.total;
+      this.mesaData.pedido.totalConPropina = this.mesaData.pedido.total + this.mesaData.pedido.propina;
     /*}
     else
     {

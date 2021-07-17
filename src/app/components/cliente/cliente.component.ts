@@ -258,7 +258,7 @@ export class ClienteComponent implements OnInit {
       }
     });
 
-    if(this.propina > 0)
+    /*if(this.propina > 0)
     {
       this.mesaData.pedido.porcentajePropina = `${this.propina}%`
       this.mesaData.pedido.propina = ((this.mesaData.pedido.total*this.propina) / 100);
@@ -269,7 +269,7 @@ export class ClienteComponent implements OnInit {
       this.mesaData.pedido.porcentajePropina = `${this.propina}%`
       this.mesaData.pedido.propina = this.propina
       this.mesaData.pedido.totalConPropina = this.mesaData.pedido.total;
-    }
+    }*/
 
     this.fireService.updateDoc("mesas", this.mesa ?? this.mesaOcupada, this.mesaData);
   }
