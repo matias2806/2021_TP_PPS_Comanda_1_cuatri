@@ -270,8 +270,8 @@ export class ClienteComponent implements OnInit {
       this.mesaData.pedido.propina = this.propina
       this.mesaData.pedido.totalConPropina = this.mesaData.pedido.total;
     }*/
-
-    this.fireService.updateDoc("mesas", this.mesa ?? this.mesaOcupada, this.mesaData);
+    this.mesaData.cliente.correo = "";
+    this.fireService.updateDoc("mesas", this.mesaOcupada, this.mesaData);
   }
 
   pagar() {
