@@ -53,14 +53,14 @@ export class EncuestaComponent implements OnInit {
 
     if(this.propina > 0)
     {
-      //this.mesaData.pedido.porcentajePropina = `${this.propina}%`
-      //this.mesaData.pedido.propina = ((this.mesaData.pedido.total*this.propina) / 100);
+      this.mesaData.pedido.porcentajePropina = `15%`
+      this.mesaData.pedido.propina = ((this.mesaData.pedido.total*this.propina) / 100);
       this.mesaData.pedido.totalConPropina = this.mesaData.pedido.total;
     }
     else
     {
-      //this.mesaData.pedido.porcentajePropina = `${this.propina}%`
-      //this.mesaData.pedido.propina = this.propina
+      this.mesaData.pedido.porcentajePropina = `15%`
+      this.mesaData.pedido.propina = this.propina
       this.mesaData.pedido.totalConPropina = this.mesaData.pedido.total;
     }
     
