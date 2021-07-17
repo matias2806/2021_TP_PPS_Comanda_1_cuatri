@@ -51,7 +51,12 @@ export class PagosComponent implements OnInit {
         estado: "",
       }
     );
+    if (this.mesaParaPagar.cliente.correo != undefined) {
     this.fireService.updateDoc("listaEspera", this.mesaParaPagar.cliente.correo, { asignado: false})
+      
+    }
+    else
+    this.fireService.updateDoc("listaEspera", "anonimo@anonimo.com", { asignado: false})
     this.paymentConfirmation = false;
     this.actualizarLista();
   }
