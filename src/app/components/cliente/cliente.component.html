@@ -36,7 +36,7 @@
     <div (click)="opt = 'estadoPedido'" >
       <span>Estado del pedido</span>
     </div>
-    <div (click)="opt = 'encuesta'" >
+    <div (click)="opt = 'encuesta'" *ngIf="this.encuestaTerminada == false">
       <span>Encuesta</span>
     </div>
     <div (click)="opt = 'estadistica'">
