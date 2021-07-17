@@ -257,6 +257,21 @@ export class ClienteComponent implements OnInit {
           break;
       }
     });
+
+    if(this.propina > 0)
+    {
+      this.mesaData.pedido.porcentajePropina = `${this.propina}%`
+      this.mesaData.pedido.propina = ((this.mesaData.pedido.total*this.propina) / 100);
+      this.mesaData.pedido.totalConPropina = (this.mesaData.pedido.total + this.mesaData.pedido.propina);
+    }
+    else
+    {
+      this.mesaData.pedido.porcentajePropina = `${this.propina}%`
+      this.mesaData.pedido.propina = this.propina
+      this.mesaData.pedido.totalConPropina = this.mesaData.pedido.total;
+    }
+
+    this.fireService.updateDoc("mesas", this.mesa ?? this.mesaOcupada, this.mesaData);
   }
 
   pagar() {
