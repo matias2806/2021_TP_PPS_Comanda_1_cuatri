@@ -51,18 +51,18 @@ export class EncuestaComponent implements OnInit {
 
   finalizarEncuesta(){
 
-    if(this.propina > 0)
-    {
+    //if(this.propina > 0)
+    //{
       this.mesaData.pedido.porcentajePropina = `15%`
       this.mesaData.pedido.propina = ((this.mesaData.pedido.total*15) / 100);
       this.mesaData.pedido.totalConPropina = this.mesaData.pedido.total;
-    }
+    /*}
     else
     {
       this.mesaData.pedido.porcentajePropina = `15%`
       this.mesaData.pedido.propina = '15'
       this.mesaData.pedido.totalConPropina = this.mesaData.pedido.total;
-    }
+    }*/
     
     this.subirEncuesta();
     this.fire.updateDoc("mesas", this.mesa ?? this.mesaEncuesta, this.mesaData);
