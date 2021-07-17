@@ -8,15 +8,20 @@
   </p>
   <div class="btn-scan" (click)="scanListaDeEspera()" *ngIf="!estadoCliente">
     <img src="../../../assets/img/qr.png" alt="" />
-    
   </div>
   <div
     class="btn-scan"
     (click)="scanMesa()"
+    *ngIf="estadoCliente == 'listaEspera'"
   >
     <img src="../../../assets/img/qr.png" alt="" />
-    <br>
-    
+  </div>
+  <div
+    class="btn-scan"
+    (click)="scanMesa()"
+    *ngIf="estadoCliente == 'encuesta'"
+  >
+    <img src="../../../assets/img/qr.png" alt="" />
   </div>
   <br>
   <div *ngIf="estadoCliente == 'listaEspera'">
@@ -25,13 +30,6 @@
     </div>
   </div>
   
-  <div
-    class="btn-scan"
-    (click)="scanMesa()"
-    *ngIf="estadoCliente == 'encuesta'"
-  >
-    <img src="../../../assets/img/qr.png" alt="" />
-  </div>
   <div class="opcionesCliente" *ngIf="this.estadoCliente == 'opts'">
     <div (click)="opt = 'estadoPedido'" >
       <span>Estado del pedido</span>
