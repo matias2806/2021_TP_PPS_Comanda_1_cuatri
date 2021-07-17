@@ -314,7 +314,7 @@ export class ClienteComponent implements OnInit {
 
   finalizar($event) {
     console.log($event);
-    //this.encuestaTerminada = true;
+    this.encuestaTerminada = true;
     this.estadoCliente = "opts";
     this.opt = "";
   }
