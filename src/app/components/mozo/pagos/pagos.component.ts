@@ -51,6 +51,7 @@ export class PagosComponent implements OnInit {
         estado: "",
       }
     );
+    this.fireService.updateDoc("listaEspera", this.mesaParaPagar.cliente.correo, { asignado: false})
     this.paymentConfirmation = false;
     this.actualizarLista();
   }
